@@ -1,5 +1,5 @@
 {
- "updated": 1795811701,
+ "updated": 1795812002,
  "cards": {
   "RSA": {
    "level": "green",
@@ -47,6 +47,13 @@
    "level": "green",
    "note": "",
    "latest": [
+    {
+     "summary": "A commenter hypothesizes how someone with an efficient elliptic curve discrete log algorithm could profit secretly (e.g., minting Monero, stealing old coins) and suggests signals to monitor, without claiming any real break.",
+     "level": "none",
+     "source": "https://scottaaronson.blog/?feed=comments-rss2",
+     "link": "https://scottaaronson.blog/?p=10387#comment-2044978",
+     "opus_confidence": null
+    },
     {
      "summary": "A commenter speculates that an AI-found classical elliptic-curve discrete log break (ECDSA, with Bitcoin as a casualty) is plausible and hopes for responsible disclosure, but cites no evidence and claims no actual break.",
      "level": "none",
