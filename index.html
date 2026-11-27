@@ -6,77 +6,138 @@
 <title>Crypto Threat Dashboard</title>
 <style>
   *{box-sizing:border-box}
-  body{font-family:system-ui,sans-serif;background:#0f1115;color:#e6e6e6;margin:0 auto;padding:16px;max-width:960px;font-size:16px;line-height:1.5;-webkit-text-size-adjust:100%}
+  html{scroll-behavior:smooth}
+  body{font-family:system-ui,sans-serif;background:#0f1115;color:#e6e6e6;margin:0;font-size:17px;line-height:1.55;-webkit-text-size-adjust:100%}
+  .wrap{max-width:1100px;margin:0 auto;padding:0 16px}
   a{color:#7ab7ff;word-break:break-word}
-  h2{font-size:20px;margin:28px 0 8px}
-  h1{margin:0 0 4px} .sub{color:#8a8f98;margin-bottom:24px}
-  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,280px),1fr));gap:12px}
+  h1{font-size:clamp(30px,6vw,52px);line-height:1.1;margin:0 0 8px}
+  h2{font-size:clamp(24px,4.5vw,34px);line-height:1.2;margin:0 0 10px}
+  h3{font-size:28px;line-height:1.2;margin:0 0 8px}
+  p{margin:0 0 12px}
+  .sub{color:#9aa0a8}
+  .top{padding:48px 0 40px}
+  .banner{display:inline-block;margin:14px 0 6px;padding:10px 18px;border-radius:999px;font-weight:700;background:#1b3a1f;color:#a5d6a7}
+  .banner.amber{background:#4a3b0c;color:#ffe082}
+  .banner.amber-high{background:#4d2a0a;color:#ffb74d}
+  .banner.red{background:#4d1414;color:#ef9a9a}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr));gap:14px;margin-top:24px}
   .card{background:#171a21;border-radius:12px;padding:16px;border-left:8px solid #2e7d32}
   .card.amber{border-color:#f9a825} .card.amber-high{border-color:#ef6c00} .card.red{border-color:#c62828}
-  .lvl{font-weight:700;font-size:13px;letter-spacing:.04em}
+  .lvl{font-weight:700;font-size:15px}
   .why{color:#9aa0a8;font-size:14px;margin:6px 0 10px}
   .ev{font-size:15px;margin:8px 0;color:#cfd3d9} .ev a{display:inline-block;padding:4px 0}
-  table{width:100%;border-collapse:collapse;margin-top:16px;font-size:14px}
-  td,th{border-bottom:1px solid #2a2e37;padding:8px;text-align:left;vertical-align:top}
-  @media (max-width:700px){
-    table,tbody,tr,td{display:block;width:100%}
-    tr:first-child{display:none}
-    .w{max-width:100%}
-    tr{background:#171a21;border-radius:12px;padding:12px;margin:0 0 12px}
-    td{border:0;padding:6px 0;font-size:15px}
-    td:first-child{font-size:18px;font-weight:700}
-    td:nth-child(2)::before{content:"What it means";display:block;color:#8a8f98;font-size:12px;text-transform:uppercase;letter-spacing:.06em}
-    td:nth-child(3)::before{content:"Rate of change and rebuild";display:block;color:#8a8f98;font-size:12px;text-transform:uppercase;letter-spacing:.06em}
-    td:nth-child(4)::before{content:"Societal risks";display:block;color:#8a8f98;font-size:12px;text-transform:uppercase;letter-spacing:.06em}
-    .methods td:nth-child(2)::before{content:"Algorithmica: ";display:inline;font-size:inherit;text-transform:none;letter-spacing:0;color:#8a8f98}
-    .methods td:nth-child(3)::before{content:"Heuristica: ";display:inline;font-size:inherit;text-transform:none;letter-spacing:0;color:#8a8f98}
-    .methods td:nth-child(4)::before{content:"Pessiland: ";display:inline;font-size:inherit;text-transform:none;letter-spacing:0;color:#8a8f98}
-    .methods td:nth-child(5)::before{content:"Minicrypt: ";display:inline;font-size:inherit;text-transform:none;letter-spacing:0;color:#8a8f98}
-    .methods td:nth-child(6)::before{content:"Cryptomania: ";display:inline;font-size:inherit;text-transform:none;letter-spacing:0;color:#8a8f98}
-    .methods td:nth-child(7)::before{content:"Likely to outlast: ";display:inline;font-size:inherit;text-transform:none;letter-spacing:0;color:#8a8f98}
-    .methods td{padding:3px 0;font-size:14px}
-    .methods td:first-child{font-size:17px}
-  }
-  .foot{color:#8a8f98;font-size:13px;margin:24px 0}
-  .hero{display:block;width:100%;height:auto;border-radius:12px;margin:8px 0 16px}
-  .w{display:block;width:100%;max-width:150px;height:auto;border-radius:8px;margin:0 0 6px}
+  #watch h2{margin-top:28px}
+  .more{display:inline-block;margin-top:28px;font-size:18px;font-weight:700}
+  .intro{padding:24px 0 8px}
+  .hero{display:block;width:100%;height:auto;border-radius:14px;margin:16px 0 48px}
+  .world{display:grid;gap:18px;margin:0 0 56px;align-items:center}
+  .world img{display:block;width:100%;height:auto;border-radius:14px}
+  .world .n{color:#8a8f98;font-size:14px}
+  @media (min-width:860px){.world{grid-template-columns:1.25fr 1fr;gap:36px}.world:nth-child(even) img{order:2}}
+  table.m{width:100%;border-collapse:collapse;margin:12px 0 8px;font-size:15px}
+  table.m td,table.m th{border-bottom:1px solid #2a2e37;padding:10px 6px;text-align:center}
+  table.m td:first-child,table.m th:first-child{text-align:left}
+  .f{color:#ef9a9a;font-weight:700} .s{color:#a5d6a7;font-weight:700}
+  .sh{display:none}
+  @media (max-width:640px){table.m{font-size:13px}.fl{display:none}.sh{display:inline}table.m td,table.m th{padding:8px 3px}}
+  .foot{color:#8a8f98;font-size:13px;margin:32px 0}
 </style>
 </head>
 <body>
-<h1>Crypto Threat Dashboard</h1>
-<div class="sub" id="updated">loading…</div>
-<div id="watch"></div>
-<div class="grid" id="grid"></div>
+<div class="wrap">
 
-<h2>Which crypto world do we live in?</h2>
-<img class="hero" src="overview.webp" width="1200" height="675" alt="Overview of the five worlds, from Algorithmica (all crypto broken) to Cryptomania (everything works)">
-<p class="sub">Five possible worlds, from Russell Impagliazzo's classic framing. Read the <a href="https://www.quantamagazine.org/which-computational-universe-do-we-live-in-20220418/">Quanta Magazine explainer</a> or the <a href="https://blog.computationalcomplexity.org/2004/06/impagliazzos-five-worlds.html">short original summary by Lance Fortnow</a>. The last two columns are our own rough scenario estimates, not established facts.</p>
-<p class="sub"><b>Theory versus practice.</b> P vs NP is a statement about how running time grows with problem size, in the worst case. It says nothing about whether the algorithm is usable. A fast algorithm can still be too slow in practice (for example n to the power of 1,000), or can be proved to exist without anyone knowing how to write it. So each world below has three versions: <b>theoretical</b> (proved, no usable algorithm), <b>practical</b> (a working, affordable algorithm), and <b>public</b> versus <b>secret</b> (who has it first). Society is hit only by the practical versions, and a secret practical version is the most dangerous, because defences cannot react to what they cannot see.</p>
-<table>
-<tr><th>World</th><th>What it means</th><th>Rate of change and rebuild</th><th>Societal risks</th></tr>
-<tr><td><img class="w" src="algorithmica.webp" loading="lazy" width="1200" height="675" alt="Algorithmica">Algorithmica</td><td>A practical, working algorithm exists: P = NP, or NP inside BPP (fast randomised algorithms, equivalent for attackers). Essentially all crypto fails, fast.</td><td>Practical and public: abrupt and total. Rebuild means returning to physical trust (in-person keys, paper, couriers); years, not months, to restore even basic digital trust. Practical but secret: the same damage, but silent at first, so defenders lose before they know.</td><td>Payments, banking, land and company registries, software updates and secure messaging fail together. Fraud and forgery surge, supply chains stumble, long periods of distrust in digital records.</td></tr>
-<tr><td><img class="w" src="heuristica.jpg" loading="lazy" width="1200" height="675" alt="Heuristica">Heuristica</td><td>Hard problems exist but are easy on average; crypto fails in practice</td><td>Slower and patchier than Algorithmica: attacks get cheaper over months or years as methods spread. Rebuild is similar, but there is more warning. Practical and public: security erodes in practice even if a few contrived inputs stay hard. The slow, patchy world: attacks work on average or on real keys but with rough edges, so there is warning time and the weakest systems fall first.</td><td>Same categories as Algorithmica, hitting weaker systems first; a long period of uncertainty about what is still safe.</td></tr>
-<tr><td><img class="w" src="pessiland.webp" loading="lazy" width="1200" height="675" alt="Pessiland">Pessiland</td><td>Hard problems exist but can't be turned into crypto</td><td>No single shock, but no way to rebuild digital trust from maths either. Permanent reliance on physical and institutional trust. Theory versus practice matters little here: hard problems may exist, but a defender cannot use them, so there is nothing practical to rebuild with.</td><td>The digital economy keeps running on trusted intermediaries and in-person checks; high costs and concentrated power.</td></tr>
-<tr><td><img class="w" src="minicrypt.webp" loading="lazy" width="1200" height="675" alt="Minicrypt">Minicrypt</td><td>Hashes and symmetric crypto survive; public-key crypto (RSA, ECC) does not</td><td>Sharp break for signatures, key exchange and web security, but a known toolkit remains (hash-based signatures, pre-shared keys, key servers). Rebuild plausibly takes one to several years, led by critical systems. Practical and public: fast factoring or discrete-log attacks are real and affordable, so RSA and elliptic curves fall while hashes survive. Practical but secret: the largest danger, since a few actors can forge signatures before anyone knows. Theoretical only: public-key crypto keeps working in practice, with a long wait for a usable attack.</td><td>Open-network trust is lost until rebuilt; key servers become single points of failure and control; anything with exposed public keys, including old signed records and coins, is vulnerable immediately.</td></tr>
-<tr><td><img class="w" src="cryptomania.webp" loading="lazy" width="1200" height="675" alt="Cryptomania">Cryptomania</td><td>Everything works: the presumed current world</td><td>Gradual and manageable: migrations to post-quantum schemes happen on planned timelines. The practical risk here is not P vs NP but engineering: large quantum computers, or a classical attack on one specific scheme, not a collapse of the whole world.</td><td>Mainly migration costs and "harvest now, decrypt later" exposure of old recorded data.</td></tr>
-</table>
-<p class="sub"><b>Not a world of its own:</b> a proof that P = NP with no usable algorithm (non-constructive, or too slow to run) changes the theory but not day-to-day security. It is a version of the world we are in now, and worth watching for a usable version.</p>
+<header class="top">
+  <h1>Crypto Threat Dashboard</h1>
+  <p class="sub">A live watch on the maths behind online security.</p>
+  <div class="banner" id="banner">loading…</div>
+  <div class="sub" id="updated"></div>
+  <div id="watch"></div>
+  <div class="grid" id="grid"></div>
+  <a class="more" href="#worlds">Which crypto world do we live in? ↓</a>
+</header>
 
-<h2>Which methods survive in which world?</h2>
-<p class="sub">A rough guide, not a prediction. "Survives" means no known reason to fall in that world; "falls" means it relies on assumptions that world removes. The last column ranks how long each method is likely to hold on.</p>
-<table class="methods">
-<tr><th>Method</th><th>Algorithmica</th><th>Heuristica</th><th>Pessiland</th><th>Minicrypt</th><th>Cryptomania</th><th>Likely to outlast</th></tr>
-<tr><td>RSA</td><td>Falls</td><td>Falls</td><td>Falls</td><td>Falls</td><td>Survives</td><td>Low: also at risk from quantum and fast factoring</td></tr>
-<tr><td>Elliptic curves, secp256k1, Ed25519</td><td>Falls</td><td>Falls</td><td>Falls</td><td>Falls</td><td>Survives</td><td>Low: same exposure as RSA</td></tr>
-<tr><td>Diffie-Hellman</td><td>Falls</td><td>Falls</td><td>Falls</td><td>Falls</td><td>Survives</td><td>Low</td></tr>
-<tr><td>Lattice schemes (ML-KEM, ML-DSA)</td><td>Falls</td><td>Falls</td><td>Falls</td><td>Falls</td><td>Survives</td><td>Medium: built to resist quantum, but newer and less tested</td></tr>
-<tr><td>Hash-based signatures (SPHINCS+)</td><td>Falls</td><td>Falls</td><td>Falls</td><td>Survives</td><td>Survives</td><td>High: security rests only on the hash</td></tr>
-<tr><td>SHA-256 and other hashes</td><td>Falls</td><td>Falls</td><td>Falls</td><td>Survives</td><td>Survives</td><td>High</td></tr>
-<tr><td>AES and other symmetric ciphers</td><td>Falls</td><td>Falls</td><td>Falls</td><td>Survives</td><td>Survives</td><td>Highest: simple, heavily studied, large safety margin</td></tr>
-</table>
-<p class="sub">Pessiland and the worlds above it share one rule: with no one-way functions, nothing survives. In Heuristica a few contrived hard cases may exist, but they are not usable for real keys, so everything erodes in practice.</p>
+<main id="worlds">
+  <div class="intro">
+    <h2>Which crypto world do we live in?</h2>
+    <p class="sub">Five possible worlds, from worst to best for cryptography. Most experts think we live in Cryptomania, but nobody can prove it. The descriptions are our own rough estimates, not established facts. Background: <a href="https://www.quantamagazine.org/which-computational-universe-do-we-live-in-20220418/">Quanta Magazine</a>, <a href="https://blog.computationalcomplexity.org/2004/06/impagliazzos-five-worlds.html">Lance Fortnow</a>.</p>
+  </div>
+  <img class="hero" src="overview.webp" width="1200" height="675" alt="Overview of the five worlds, from Algorithmica (all crypto broken) to Cryptomania (everything works)">
+
+  <div id="list">
+    <section class="world">
+      <img src="algorithmica.webp" loading="lazy" width="1200" height="675" alt="Algorithmica">
+      <div>
+        <div class="n">World 1 of 5</div>
+        <h3 style="color:#ef9a9a">Algorithmica</h3>
+        <p><b>What it means.</b> A practical, working algorithm solves hard problems fast (P = NP, or NP inside BPP). Essentially all crypto fails.</p>
+        <p><b>Rate of change.</b> Abrupt and total. Rebuilding means going back to physical trust: keys in person, paper, couriers. Years, not months. A secret version is worse, because the damage is silent at first.</p>
+        <p><b>Risks.</b> Payments, banking, registries, software updates and messaging fail together. Fraud and forgery surge.</p>
+      </div>
+    </section>
+    <section class="world">
+      <img src="heuristica.jpg" loading="lazy" width="1200" height="675" alt="Heuristica">
+      <div>
+        <div class="n">World 2 of 5</div>
+        <h3 style="color:#ffcc80">Heuristica</h3>
+        <p><b>What it means.</b> Hard problems exist in theory, but they are easy on average, so real keys still fall.</p>
+        <p><b>Rate of change.</b> Slower and patchier. Attacks get cheaper over months or years, so there is some warning. The weakest systems fall first.</p>
+        <p><b>Risks.</b> The same damage as Algorithmica, plus a long period of not knowing what is still safe.</p>
+      </div>
+    </section>
+    <section class="world">
+      <img src="pessiland.webp" loading="lazy" width="1200" height="675" alt="Pessiland">
+      <div>
+        <div class="n">World 3 of 5</div>
+        <h3 style="color:#bcaaa4">Pessiland</h3>
+        <p><b>What it means.</b> Hard problems exist, but you cannot build crypto from them.</p>
+        <p><b>Rate of change.</b> No single shock, but nothing to rebuild digital trust from either. We rely on physical and institutional trust for good.</p>
+        <p><b>Risks.</b> The digital economy runs on trusted middlemen and in-person checks. High costs and concentrated power.</p>
+      </div>
+    </section>
+    <section class="world">
+      <img src="minicrypt.webp" loading="lazy" width="1200" height="675" alt="Minicrypt">
+      <div>
+        <div class="n">World 4 of 5</div>
+        <h3 style="color:#80cbc4">Minicrypt</h3>
+        <p><b>What it means.</b> Hashes and symmetric crypto survive. Public-key crypto (RSA, elliptic curves) does not.</p>
+        <p><b>Rate of change.</b> A sharp break for signatures and web security, but a known toolkit remains. Rebuilding plausibly takes one to several years. A secret break is the biggest danger.</p>
+        <p><b>Risks.</b> Trust on open networks is lost until rebuilt. Key servers become single points of failure. Anything with an exposed public key, including old signed records and coins, is vulnerable straight away.</p>
+      </div>
+    </section>
+    <section class="world">
+      <img src="cryptomania.webp" loading="lazy" width="1200" height="675" alt="Cryptomania">
+      <div>
+        <div class="n">World 5 of 5</div>
+        <h3 style="color:#a5d6a7">Cryptomania</h3>
+        <p><b>What it means.</b> Everything works. This is the world we presume we are in.</p>
+        <p><b>Rate of change.</b> Gradual and manageable. Migration to post-quantum schemes follows planned timelines.</p>
+        <p><b>Risks.</b> Mostly migration costs and "harvest now, decrypt later" exposure of old recorded data. The real worries are quantum computers or an attack on one specific scheme.</p>
+      </div>
+    </section>
+  </div>
+
+  <p class="sub">Not a world of its own: a proof that P = NP with no usable algorithm changes the theory, not day-to-day security. It is worth watching for a usable version.</p>
+
+  <h2 style="margin-top:48px">What survives, what dies</h2>
+  <p class="sub">A rough guide. Columns run in world order: Algorithmica to Cryptomania.</p>
+  <table class="m">
+    <tr><th>Method</th>
+      <th><span class="fl">Algorithmica</span><span class="sh">Alg.</span></th>
+      <th><span class="fl">Heuristica</span><span class="sh">Heu.</span></th>
+      <th><span class="fl">Pessiland</span><span class="sh">Pes.</span></th>
+      <th><span class="fl">Minicrypt</span><span class="sh">Min.</span></th>
+      <th><span class="fl">Cryptomania</span><span class="sh">Cry.</span></th></tr>
+    <tr><td>RSA, elliptic curves, Diffie-Hellman</td><td class="f">Falls</td><td class="f">Falls</td><td class="f">Falls</td><td class="f">Falls</td><td class="s">Holds</td></tr>
+    <tr><td>Lattice schemes (ML-KEM, ML-DSA)</td><td class="f">Falls</td><td class="f">Falls</td><td class="f">Falls</td><td class="f">Falls</td><td class="s">Holds</td></tr>
+    <tr><td>Hash-based signatures</td><td class="f">Falls</td><td class="f">Falls</td><td class="f">Falls</td><td class="s">Holds</td><td class="s">Holds</td></tr>
+    <tr><td>SHA-256 and other hashes</td><td class="f">Falls</td><td class="f">Falls</td><td class="f">Falls</td><td class="s">Holds</td><td class="s">Holds</td></tr>
+    <tr><td>AES and symmetric ciphers</td><td class="f">Falls</td><td class="f">Falls</td><td class="f">Falls</td><td class="s">Holds</td><td class="s">Holds</td></tr>
+  </table>
+  <p>First to go: RSA and elliptic curves. Last line of defence: hashes and AES.</p>
+</main>
 
 <div class="foot">Automated, unverified signals from public posts. Not advice. Amber means a credible claim, not a confirmed break.</div>
+</div>
 
 <script>
 const WHY = {
@@ -88,12 +149,20 @@ const WHY = {
   PvsNP: "If P = NP in practice, nearly all public-key crypto fails together.",
   general: "Broad statements about cryptography that name no single primitive."
 };
+const ORDER = {green:0, amber:1, "amber-high":2, red:3};
 const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 async function load(){
   try{
     const r = await fetch("status.json?" + Date.now()); const s = await r.json();
-    document.getElementById("updated").textContent =
-      "Updated " + new Date(s.updated*1000).toLocaleString();
+    document.getElementById("updated").textContent = "Updated " + new Date(s.updated*1000).toLocaleString();
+    const cards = Object.values(s.cards);
+    const worst = cards.reduce((m,c) => (ORDER[c.level] > ORDER[m] ? c.level : m), "green");
+    const n = cards.filter(c => c.level !== "green").length;
+    const b = document.getElementById("banner");
+    b.className = "banner " + worst;
+    b.textContent = worst === "green" ? "All clear: no credible signals"
+      : worst === "red" ? "Red: a verified break has been reported"
+      : (worst === "amber-high" ? "Amber-high: " : "Watching: ") + n + (n === 1 ? " card" : " cards") + " on alert";
     document.getElementById("watch").innerHTML = (s.watch && s.watch.length) ? '<h2>Expert watch</h2>' + s.watch.map(w => `<div class="ev"><b>${esc(w.expert)}</b> (${esc(w.card)}): ${esc(w.summary)} ${/^https?:/.test(w.link) ? `<a href="${esc(w.link)}" target="_blank" rel="noopener">link</a>` : ""}</div>`).join("") : "";
     document.getElementById("grid").innerHTML = Object.entries(s.cards).map(([name,c]) => `
       <div class="card ${esc(c.level)}">
@@ -105,7 +174,7 @@ async function load(){
           ${e.opus_confidence!=null ? `(plausibility ${esc(e.opus_confidence)}%)` : ""}
           ${/^https?:/.test(e.link) ? `<a href="${esc(e.link)}" target="_blank" rel="noopener">source</a>` : ""}</div>`).join("") || '<div class="ev">No credible signals.</div>'}
       </div>`).join("");
-  }catch(e){ document.getElementById("updated").textContent = "No data yet."; }
+  }catch(e){ document.getElementById("updated").textContent = "No data yet."; document.getElementById("banner").textContent = "Waiting for data"; }
 }
 load(); setInterval(load, 60000);
 </script>
