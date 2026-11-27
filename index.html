@@ -56,9 +56,9 @@ async function load(){
         <div class="lvl">${esc(name)} — ${esc(c.level)}</div>
         <div class="why">${esc(WHY[name]||"")}</div>
         ${c.note ? `<div class="ev"><b>Note:</b> ${esc(c.note)}</div>` : ""}
-        ${c.latest.map(e => `<div class="ev">${esc(e.summary)}
+        ${(c.level === "green" ? [] : c.latest).map(e => `<div class="ev">${esc(e.summary)}
           ${e.opus_confidence!=null ? `(plausibility ${esc(e.opus_confidence)}%)` : ""}
-          ${/^https?:/.test(e.source) ? `<a href="${esc(e.source)}">source</a>` : ""}</div>`).join("") || '<div class="ev">No credible signals.</div>'}
+          ${/^https?:/.test(e.link) ? `<a href="${esc(e.link)}" target="_blank" rel="noopener">source</a>` : ""}</div>`).join("") || '<div class="ev">No credible signals.</div>'}
       </div>`).join("");
   }catch(e){ document.getElementById("updated").textContent = "No data yet."; }
 }
