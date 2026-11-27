@@ -5,33 +5,48 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Crypto Threat Dashboard</title>
 <style>
-  body{font-family:system-ui,sans-serif;background:#0f1115;color:#e6e6e6;margin:0;padding:24px;max-width:960px;margin:auto}
+  *{box-sizing:border-box}
+  body{font-family:system-ui,sans-serif;background:#0f1115;color:#e6e6e6;margin:0 auto;padding:16px;max-width:960px;font-size:16px;line-height:1.5;-webkit-text-size-adjust:100%}
+  a{color:#7ab7ff;word-break:break-word}
+  h2{font-size:20px;margin:28px 0 8px}
   h1{margin:0 0 4px} .sub{color:#8a8f98;margin-bottom:24px}
-  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,280px),1fr));gap:12px}
   .card{background:#171a21;border-radius:12px;padding:16px;border-left:8px solid #2e7d32}
   .card.amber{border-color:#f9a825} .card.amber-high{border-color:#ef6c00} .card.red{border-color:#c62828}
-  .lvl{font-weight:700;text-transform:uppercase;font-size:12px;letter-spacing:.08em}
-  .why{color:#9aa0a8;font-size:13px;margin:6px 0 10px}
-  .ev{font-size:13px;margin:6px 0;color:#cfd3d9} .ev a{color:#7ab7ff}
-  table{width:100%;border-collapse:collapse;margin-top:32px;font-size:14px}
+  .lvl{font-weight:700;font-size:13px;letter-spacing:.04em}
+  .why{color:#9aa0a8;font-size:14px;margin:6px 0 10px}
+  .ev{font-size:15px;margin:8px 0;color:#cfd3d9} .ev a{display:inline-block;padding:4px 0}
+  table{width:100%;border-collapse:collapse;margin-top:16px;font-size:14px}
   td,th{border-bottom:1px solid #2a2e37;padding:8px;text-align:left;vertical-align:top}
-  .foot{color:#6b7078;font-size:12px;margin-top:24px}
+  @media (max-width:700px){
+    table,tbody,tr,td{display:block;width:100%}
+    tr:first-child{display:none}
+    tr{background:#171a21;border-radius:12px;padding:12px;margin:0 0 12px}
+    td{border:0;padding:6px 0;font-size:15px}
+    td:first-child{font-size:18px;font-weight:700}
+    td:nth-child(2)::before{content:"What it means";display:block;color:#8a8f98;font-size:12px;text-transform:uppercase;letter-spacing:.06em}
+    td:nth-child(3)::before{content:"Rate of change and rebuild";display:block;color:#8a8f98;font-size:12px;text-transform:uppercase;letter-spacing:.06em}
+    td:nth-child(4)::before{content:"Societal risks";display:block;color:#8a8f98;font-size:12px;text-transform:uppercase;letter-spacing:.06em}
+  }
+  .foot{color:#8a8f98;font-size:13px;margin:24px 0}
 </style>
 </head>
 <body>
 <h1>Crypto Threat Dashboard</h1>
 <div class="sub" id="updated">loading…</div>
+<div id="watch"></div>
 <div class="grid" id="grid"></div>
 
-<h2 style="margin-top:40px">Which crypto world do we live in?</h2>
+<h2>Which crypto world do we live in?</h2>
 <p class="sub">Five possible worlds, from Russell Impagliazzo's classic framing. Read the <a href="https://www.quantamagazine.org/which-computational-universe-do-we-live-in-20220418/">Quanta Magazine explainer</a> or the <a href="https://blog.computationalcomplexity.org/2004/06/impagliazzos-five-worlds.html">short original summary by Lance Fortnow</a>. The last two columns are our own rough scenario estimates, not established facts.</p>
+<p class="sub"><b>Theory versus practice.</b> P vs NP is a statement about how running time grows with problem size, in the worst case. It says nothing about whether the algorithm is usable. A fast algorithm can still be too slow in practice (for example n to the power of 1,000), or can be proved to exist without anyone knowing how to write it. So each world below has three versions: <b>theoretical</b> (proved, no usable algorithm), <b>practical</b> (a working, affordable algorithm), and <b>public</b> versus <b>secret</b> (who has it first). Society is hit only by the practical versions, and a secret practical version is the most dangerous, because defences cannot react to what they cannot see.</p>
 <table>
 <tr><th>World</th><th>What it means</th><th>Rate of change and rebuild</th><th>Societal risks</th></tr>
-<tr><td>Algorithmica</td><td>P = NP; essentially all crypto fails</td><td>Abrupt and total once a practical algorithm is public. Rebuild means returning to physical trust: in-person keys, paper, couriers. Years, not months, to restore even basic digital trust.</td><td>Payments, banking, land and company registries, software updates and secure messaging fail together. Fraud and forgery surge, supply chains stumble, long periods of distrust in digital records.</td></tr>
-<tr><td>Heuristica</td><td>Hard problems exist but are easy on average; crypto fails in practice</td><td>Slower and patchier than Algorithmica: attacks get cheaper over months or years as methods spread. Rebuild is similar, but there is more warning.</td><td>Same categories as Algorithmica, hitting weaker systems first; a long period of uncertainty about what is still safe.</td></tr>
-<tr><td>Pessiland</td><td>Hard problems exist but can't be turned into crypto</td><td>No single shock, but no way to rebuild digital trust from maths either. Permanent reliance on physical and institutional trust.</td><td>The digital economy keeps running on trusted intermediaries and in-person checks; high costs and concentrated power.</td></tr>
-<tr><td>Minicrypt</td><td>Hashes and symmetric crypto survive; public-key crypto (RSA, ECC) does not</td><td>Sharp break for signatures, key exchange and web security, but a known toolkit remains (hash-based signatures, pre-shared keys, key servers). Rebuild plausibly takes one to several years, led by critical systems.</td><td>Open-network trust is lost until rebuilt; key servers become single points of failure and control; anything with exposed public keys, including old signed records and coins, is vulnerable immediately.</td></tr>
-<tr><td>Cryptomania</td><td>Everything works: the presumed current world</td><td>Gradual and manageable: migrations to post-quantum schemes happen on planned timelines.</td><td>Mainly migration costs and "harvest now, decrypt later" exposure of old recorded data.</td></tr>
+<tr><td>Algorithmica</td><td>P = NP, or NP inside BPP (fast randomised algorithms, equivalent for attackers); essentially all crypto fails <i>if the algorithm is practical</i>. If it is only theoretical (unusable or non-constructive), day-to-day crypto is unaffected.</td><td>Practical and public: abrupt and total. Rebuild means returning to physical trust (in-person keys, paper, couriers); years, not months, to restore even basic digital trust. Practical but secret: the same damage, but silent at first, so defenders lose before they know. Theoretical only: little near-term change; the main effect is a long period of uncertainty while people watch for a usable version.</td><td>Payments, banking, land and company registries, software updates and secure messaging fail together. Fraud and forgery surge, supply chains stumble, long periods of distrust in digital records.</td></tr>
+<tr><td>Heuristica</td><td>Hard problems exist but are easy on average; crypto fails in practice</td><td>Slower and patchier than Algorithmica: attacks get cheaper over months or years as methods spread. Rebuild is similar, but there is more warning. Practical and public: security erodes in practice even if a few contrived inputs stay hard. Theoretical only: some worst-case instances stay hard, but real keys are not among them, so the effect is close to the practical case.</td><td>Same categories as Algorithmica, hitting weaker systems first; a long period of uncertainty about what is still safe.</td></tr>
+<tr><td>Pessiland</td><td>Hard problems exist but can't be turned into crypto</td><td>No single shock, but no way to rebuild digital trust from maths either. Permanent reliance on physical and institutional trust. Theory versus practice matters little here: hard problems may exist, but a defender cannot use them, so there is nothing practical to rebuild with.</td><td>The digital economy keeps running on trusted intermediaries and in-person checks; high costs and concentrated power.</td></tr>
+<tr><td>Minicrypt</td><td>Hashes and symmetric crypto survive; public-key crypto (RSA, ECC) does not</td><td>Sharp break for signatures, key exchange and web security, but a known toolkit remains (hash-based signatures, pre-shared keys, key servers). Rebuild plausibly takes one to several years, led by critical systems. Practical and public: fast factoring or discrete-log attacks are real and affordable, so RSA and elliptic curves fall while hashes survive. Practical but secret: the largest danger, since a few actors can forge signatures before anyone knows. Theoretical only: public-key crypto keeps working in practice, with a long wait for a usable attack.</td><td>Open-network trust is lost until rebuilt; key servers become single points of failure and control; anything with exposed public keys, including old signed records and coins, is vulnerable immediately.</td></tr>
+<tr><td>Cryptomania</td><td>Everything works: the presumed current world</td><td>Gradual and manageable: migrations to post-quantum schemes happen on planned timelines. The practical risk here is not P vs NP but engineering: large quantum computers, or a classical attack on one specific scheme, not a collapse of the whole world.</td><td>Mainly migration costs and "harvest now, decrypt later" exposure of old recorded data.</td></tr>
 </table>
 
 <div class="foot">Automated, unverified signals from public posts. Not advice. Amber means a credible claim, not a confirmed break.</div>
@@ -51,9 +66,10 @@ async function load(){
     const r = await fetch("status.json?" + Date.now()); const s = await r.json();
     document.getElementById("updated").textContent =
       "Updated " + new Date(s.updated*1000).toLocaleString();
+    document.getElementById("watch").innerHTML = (s.watch && s.watch.length) ? '<h2>Expert watch</h2>' + s.watch.map(w => `<div class="ev"><b>${esc(w.expert)}</b> (${esc(w.card)}): ${esc(w.summary)} ${/^https?:/.test(w.link) ? `<a href="${esc(w.link)}" target="_blank" rel="noopener">link</a>` : ""}</div>`).join("") : "";
     document.getElementById("grid").innerHTML = Object.entries(s.cards).map(([name,c]) => `
       <div class="card ${esc(c.level)}">
-        <div class="lvl">${esc(name)} — ${esc(c.level)}</div>
+        <div class="lvl">${esc(({PvsNP:"P vs NP"})[name]||name)} — ${esc(c.level)}</div>
         <div class="why">${esc(WHY[name]||"")}</div>
         ${c.note ? `<div class="ev"><b>Note:</b> ${esc(c.note)}</div>` : ""}
         ${(c.level === "green" ? [] : c.latest).map(e => `<div class="ev">${esc(e.summary)}
