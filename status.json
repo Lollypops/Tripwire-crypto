@@ -1,5 +1,5 @@
 {
- "updated": 1795815001,
+ "updated": 1795815301,
  "cards": {
   "RSA": {
    "level": "green",
@@ -201,6 +201,13 @@
    "note": "",
    "latest": [
     {
+     "summary": "The tracked expert relays Scott Aaronson's statements that a major cryptographic breakthrough is expected to be disclosed soon, that it does not immediately threaten RSA, and that rumours of more consequential breaks persist.",
+     "level": "rumour",
+     "source": "x:1992435757110415360",
+     "link": "https://x.com/i/web/status/2126428251488669734",
+     "opus_confidence": null
+    },
+    {
      "summary": "A commenter links an eprint (2026/3020) claiming a deterministic subexponential-time discrete log algorithm and remarks on it casually, without urging action; the rest of the comment is unrelated complexity-theory talk.",
      "level": "claimed",
      "source": "https://scottaaronson.blog/?feed=comments-rss2",
@@ -212,6 +219,13 @@
   }
  },
  "watch": [
+  {
+   "expert": "@rynorhn",
+   "card": "general",
+   "summary": "The tracked expert relays Scott Aaronson's statements that a major cryptographic breakthrough is expected to be disclosed soon, that it does not immediately threaten RSA, and that rumours of more consequential breaks persist.",
+   "link": "https://x.com/i/web/status/2126428251488669734",
+   "t": 1795815022.984981
+  },
   {
    "expert": "@fortnow",
    "card": "RSA",
