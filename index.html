@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Crypto Threat Dashboard</title>
+<style>
+  body{font-family:system-ui,sans-serif;background:#0f1115;color:#e6e6e6;margin:0;padding:24px;max-width:960px;margin:auto}
+  h1{margin:0 0 4px} .sub{color:#8a8f98;margin-bottom:24px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px}
+  .card{background:#171a21;border-radius:12px;padding:16px;border-left:8px solid #2e7d32}
+  .card.amber{border-color:#f9a825} .card.amber-high{border-color:#ef6c00} .card.red{border-color:#c62828}
+  .lvl{font-weight:700;text-transform:uppercase;font-size:12px;letter-spacing:.08em}
+  .why{color:#9aa0a8;font-size:13px;margin:6px 0 10px}
+  .ev{font-size:13px;margin:6px 0;color:#cfd3d9} .ev a{color:#7ab7ff}
+  table{width:100%;border-collapse:collapse;margin-top:32px;font-size:14px}
+  td,th{border-bottom:1px solid #2a2e37;padding:8px;text-align:left;vertical-align:top}
+  .foot{color:#6b7078;font-size:12px;margin-top:24px}
+</style>
+</head>
+<body>
+<h1>Crypto Threat Dashboard</h1>
+<div class="sub" id="updated">loading…</div>
+<div class="grid" id="grid"></div>
+
+<h2 style="margin-top:40px">Which crypto world do we live in?</h2>
+<table>
+<tr><th>World</th><th>What it means</th></tr>
+<tr><td>Algorithmica</td><td>P = NP; essentially all crypto fails</td></tr>
+<tr><td>Heuristica</td><td>Hard problems exist but are easy on average; crypto fails in practice</td></tr>
+<tr><td>Pessiland</td><td>Hard problems exist but can't be turned into crypto</td></tr>
+<tr><td>Minicrypt</td><td>Hashes and symmetric crypto survive; public-key crypto (RSA, ECC) does not</td></tr>
+<tr><td>Cryptomania</td><td>Everything works: the presumed current world</td></tr>
+</table>
+
+<div class="foot">Automated, unverified signals from public posts. Not advice. Amber means a credible claim, not a confirmed break.</div>
+
+<script>
+const WHY = {
+  RSA: "Legacy web certificates, VPNs, signing. Rests on factoring being hard.",
+  ECC: "Modern HTTPS and messaging keys. Rests on elliptic-curve discrete log.",
+  secp256k1: "The curve behind Bitcoin and Ethereum keys.",
+  hash: "Fingerprints for mining, addresses, passwords, integrity.",
+  lattice: "Basis of the new post-quantum standards (ML-KEM, ML-DSA).",
+  PvsNP: "If P = NP in practice, nearly all public-key crypto fails together."
+};
+const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+async function load(){
+  try{
+    const r = await fetch("status.json?" + Date.now()); const s = await r.json();
+    document.getElementById("updated").textContent =
+      "Updated " + new Date(s.updated*1000).toLocaleString();
+    document.getElementById("grid").innerHTML = Object.entries(s.cards).map(([name,c]) => `
+      <div class="card ${esc(c.level)}">
+        <div class="lvl">${esc(name)} — ${esc(c.level)}</div>
+        <div class="why">${esc(WHY[name]||"")}</div>
+        ${c.note ? `<div class="ev"><b>Note:</b> ${esc(c.note)}</div>` : ""}
+        ${c.latest.map(e => `<div class="ev">${esc(e.summary)}
+          ${e.opus_confidence!=null ? `(plausibility ${esc(e.opus_confidence)}%)` : ""}
+          ${/^https?:/.test(e.source) ? `<a href="${esc(e.source)}">source</a>` : ""}</div>`).join("") || '<div class="ev">No credible signals.</div>'}
+      </div>`).join("");
+  }catch(e){ document.getElementById("updated").textContent = "No data yet."; }
+}
+load(); setInterval(load, 60000);
+</script>
+</body>
+</html>

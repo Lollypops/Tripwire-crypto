@@ -1,0 +1,160 @@
+{
+ "updated": 1795792790,
+ "cards": {
+  "RSA": {
+   "level": "green",
+   "note": "",
+   "latest": [
+    {
+     "summary": "A commenter relays unverified social-media rumours that OpenAI and Anthropic have found factoring in P, that P=BQP has been proven, that ECC is broken and that Ring-LWE is not quantum-resistant, with no evidence or personal endorsement given.",
+     "level": "rumour",
+     "source": "https://scottaaronson.blog/?feed=comments-rss2",
+     "opus_confidence": null
+    },
+    {
+     "summary": "A retweet of an unverified rumour that frontier AI labs have broken major cryptographic primitives, including 'factoring is in P', with no evidence in the visible text and no sign the retweeter endorses it or is alarmed.",
+     "level": "rumour",
+     "source": "x:1434825574195859458",
+     "opus_confidence": null
+    },
+    {
+     "summary": "A retweet of @zkDragon's commentary on circulating cryptography-break rumours, which appears to downplay them (factoring only connects to pairings, and even a 1-billion-factor speedup 'still\u2026' falls short), but the text is truncated and no actual break claim is verified.",
+     "level": "rumour",
+     "source": "x:1013834266906714112",
+     "opus_confidence": null
+    },
+    {
+     "summary": "The author says a hypothetical proof that factoring is in P would not change their beliefs, since factoring has so much structure that it seems surprising it is not already in P, and it would not affect their belief that learning parity with noise is hard; this is a hypothetical, with no break claimed or reported.",
+     "level": "none",
+     "source": "x:883024018009456640",
+     "opus_confidence": null
+    },
+    {
+     "summary": "Post relays that Google Research published AI-driven papers claiming unconditional L_N[1/3] integer factorization and sub-quasi-polynomial discrete logs in fixed-characteristic finite fields; the factoring claim would only make the heuristic NFS bound rigorous, so it is not a practical break, and the post is neutral, unverified reporting.",
+     "level": "claimed",
+     "source": "x:7773582",
+     "opus_confidence": null
+    }
+   ]
+  },
+  "ECC": {
+   "level": "green",
+   "note": "",
+   "latest": [
+    {
+     "summary": "A commenter speculates that an AI-found classical elliptic-curve discrete log break (ECDSA, with Bitcoin as a casualty) is plausible and hopes for responsible disclosure, but cites no evidence and claims no actual break.",
+     "level": "none",
+     "source": "https://scottaaronson.blog/?feed=comments-rss2",
+     "opus_confidence": null
+    }
+   ]
+  },
+  "secp256k1": {
+   "level": "green",
+   "note": "",
+   "latest": []
+  },
+  "hash": {
+   "level": "green",
+   "note": "",
+   "latest": [
+    {
+     "summary": "A routine eprint proves tight post-quantum security bounds for Ascon AEAD under nonce misuse, with matching quantum attacks at O(2^{c/3}) queries that do not break the standard security claims.",
+     "level": "none",
+     "source": "https://eprint.iacr.org/rss/rss.xml",
+     "opus_confidence": null
+    },
+    {
+     "summary": "An ePrint paper proves stronger security bounds (near-n-bit rather than birthday-scale) for preimage and second-preimage resistance of the JH hash mode in the ideal-permutation model, which is a strengthening result and not a break.",
+     "level": "none",
+     "source": "https://eprint.iacr.org/rss/rss.xml",
+     "opus_confidence": null
+    },
+    {
+     "summary": "An eprint analyzes the 'target quotient' technique against homogeneous MQ signature schemes (UOV, SNOVA, QR-UOV), reporting only marginal attack-cost savings of about 0.05-4.6 bits, so no practical break and no urgent action is implied.",
+     "level": "claimed",
+     "source": "https://eprint.iacr.org/rss/rss.xml",
+     "opus_confidence": null
+    },
+    {
+     "summary": "An eprint paper presents MechCrypto, an LLM-agent cryptanalysis tool that reports 23 Critical findings across 119 first-round NGCC candidates, including a zero-search collision in the MEGASCON AVX-512 S-box. These are flaws in new competition submissions, not breaks of deployed standards such as RSA, ECC, or established hashes.",
+     "level": "claimed",
+     "source": "https://eprint.iacr.org/rss/rss.xml",
+     "opus_confidence": null
+    },
+    {
+     "summary": "The author replies in a discussion about AI-driven cryptanalysis, saying they do not particularly believe a break is imminent and see no strong argument for whether AI would first break symmetric or asymmetric crypto, assuming a break exists; this is speculation with no specific claim or evidence.",
+     "level": "rumour",
+     "source": "x:2475066457",
+     "opus_confidence": null
+    }
+   ]
+  },
+  "lattice": {
+   "level": "green",
+   "note": "",
+   "latest": [
+    {
+     "summary": "An eprint shows the Distorted McEliece Public Key assumption of Dyseryn-Francati-Venturi pseudorandom codes is false for full-support Raw Reed-Solomon codes, since a parity check distinguishes the key, but it gives no key recovery or ciphertext-level break and does not affect standard deployed cryptography.",
+     "level": "claimed",
+     "source": "https://eprint.iacr.org/rss/rss.xml",
+     "opus_confidence": null
+    },
+    {
+     "summary": "An ePrint paper proves worst-case (2,1)-quasi-cyclic syndrome decoding is NP-complete for low weight (w < sqrt(n)) via reduction from 3-Dimensional Matching. This is a theoretical hardness result that supports code-based cryptography (e.g., BIKE/HQC) and does not claim any break.",
+     "level": "none",
+     "source": "https://eprint.iacr.org/rss/rss.xml",
+     "opus_confidence": null
+    },
+    {
+     "summary": "An eprint paper presents an incremental optimization of critical-pair selection in the F4 Gr\u00f6bner basis algorithm, cutting MQ-solving time by 35-67% on small weakly overdetermined instances over F_31; this is routine algorithmic work with no claimed break of any cryptosystem.",
+     "level": "none",
+     "source": "https://eprint.iacr.org/rss/rss.xml",
+     "opus_confidence": null
+    },
+    {
+     "summary": "The author replies in a thread with Matthew Green and Yehuda Lindell. They say they do not particularly believe in an AI-driven cryptographic break and see no strong arguments for whether a symmetric or asymmetric break would come first, so this is speculation, not a claim of an actual break.",
+     "level": "rumour",
+     "source": "x:2475066457",
+     "opus_confidence": null
+    },
+    {
+     "summary": "Bernstein's blog post discusses gaps between marketing claims and reality in lattice-crypto security (modules, asymptotics, worst-case), but it reports no break or new attack and shows no unusual anxiety or call to act.",
+     "level": "none",
+     "source": "https://blog.cr.yp.to/feed.application=xml",
+     "opus_confidence": null
+    }
+   ]
+  },
+  "PvsNP": {
+   "level": "green",
+   "note": "",
+   "latest": [
+    {
+     "summary": "The author argues that P vs NP debates are meaningless for practical security, noting that even a hypothetical polynomial-time factoring algorithm with a huge exponent like O((log n)^25) wouldn't weaken RSA in practice, and does not claim any actual break.",
+     "level": "none",
+     "source": "x:1122808800573050881",
+     "opus_confidence": null
+    },
+    {
+     "summary": "The author argues that P vs NP debates are irrelevant to practical security, noting that even a hypothetical polynomial-time factoring algorithm with a huge exponent like O((log n)^25) would leave RSA's real-world security unchanged, and does not claim or report any actual break.",
+     "level": "none",
+     "source": "x:1122808800573050881",
+     "opus_confidence": null
+    },
+    {
+     "summary": "A commenter (not Aaronson) on a post about a VP \u2260 VNP result argues that P \u2260 NP is not close, says an effective P = NP would be a sudden but unlikely bombshell, and reports no break of any cryptographic primitive.",
+     "level": "none",
+     "source": "https://scottaaronson.blog/?feed=comments-rss2",
+     "opus_confidence": null
+    },
+    {
+     "summary": "A commenter named Jeff argues in general terms that P\u2260NP (or P=NP) would not by itself settle practical cryptographic security, given constants, non-constructive proofs and similar caveats, and makes no claim of an actual break.",
+     "level": "none",
+     "source": "https://scottaaronson.blog/?feed=comments-rss2",
+     "opus_confidence": null
+    }
+   ]
+  }
+ }
+}
