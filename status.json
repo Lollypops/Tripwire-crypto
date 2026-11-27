@@ -1,5 +1,5 @@
 {
- "updated": 1795821001,
+ "updated": 1795821301,
  "cards": {
   "RSA": {
    "level": "green",
@@ -75,6 +75,13 @@
    "note": "",
    "latest": [
     {
+     "summary": "An ordinary commenter predicts, without evidence, that frontier AI labs will be confirmed to have methods that break SHA256 and other common cryptography.",
+     "level": "rumour",
+     "source": "https://scottaaronson.blog/?feed=comments-rss2",
+     "link": "https://scottaaronson.blog/?p=10387#comment-2045013",
+     "opus_confidence": null
+    },
+    {
      "summary": "A routine eprint proves tight post-quantum security bounds for Ascon AEAD under nonce misuse, with matching quantum attacks at O(2^{c/3}) queries that do not break the standard security claims.",
      "level": "none",
      "source": "https://eprint.iacr.org/rss/rss.xml",
@@ -100,13 +107,6 @@
      "level": "claimed",
      "source": "https://eprint.iacr.org/rss/rss.xml",
      "link": "https://eprint.iacr.org/2026/3050",
-     "opus_confidence": null
-    },
-    {
-     "summary": "The author replies in a discussion about AI-driven cryptanalysis, saying they do not particularly believe a break is imminent and see no strong argument for whether AI would first break symmetric or asymmetric crypto, assuming a break exists; this is speculation with no specific claim or evidence.",
-     "level": "rumour",
-     "source": "x:2475066457",
-     "link": "https://x.com/i/web/status/2117319610987147418",
      "opus_confidence": null
     }
    ],
