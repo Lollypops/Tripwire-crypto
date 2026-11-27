@@ -1,10 +1,17 @@
 {
- "updated": 1795801801,
+ "updated": 1795802101,
  "cards": {
   "RSA": {
    "level": "green",
    "note": "",
    "latest": [
+    {
+     "summary": "Tracked expert Lance Fortnow says rumors about cryptography are circulating and advises monitoring the RSA Challenge factoring problems as early indicators, with fast progress such as factoring 1536-bit numbers being the alarm threshold.",
+     "level": "rumour",
+     "source": "x:15421904",
+     "link": "https://x.com/i/web/status/2126372061400404338",
+     "opus_confidence": null
+    },
     {
      "summary": "A commenter relays unverified social-media rumours that OpenAI and Anthropic have found factoring in P, that P=BQP has been proven, that ECC is broken and that Ring-LWE is not quantum-resistant, with no evidence or personal endorsement given.",
      "level": "rumour",
@@ -31,13 +38,6 @@
      "level": "none",
      "source": "x:883024018009456640",
      "link": "https://x.com/i/web/status/2125684982693965863",
-     "opus_confidence": null
-    },
-    {
-     "summary": "Post relays that Google Research published AI-driven papers claiming unconditional L_N[1/3] integer factorization and sub-quasi-polynomial discrete logs in fixed-characteristic finite fields; the factoring claim would only make the heuristic NFS bound rigorous, so it is not a practical break, and the post is neutral, unverified reporting.",
-     "level": "claimed",
-     "source": "x:7773582",
-     "link": "https://x.com/i/web/status/2125623954429907410",
      "opus_confidence": null
     }
    ],
@@ -196,5 +196,13 @@
    "world": ""
   }
  },
- "watch": []
+ "watch": [
+  {
+   "expert": "@fortnow",
+   "card": "RSA",
+   "summary": "Tracked expert Lance Fortnow says rumors about cryptography are circulating and advises monitoring the RSA Challenge factoring problems as early indicators, with fast progress such as factoring 1536-bit numbers being the alarm threshold.",
+   "link": "https://x.com/i/web/status/2126372061400404338",
+   "t": 1795801822.413654
+  }
+ ]
 }
