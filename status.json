@@ -1,5 +1,5 @@
 {
- "updated": 1795819801,
+ "updated": 1795820101,
  "cards": {
   "RSA": {
    "level": "green",
@@ -117,6 +117,13 @@
    "note": "",
    "latest": [
     {
+     "summary": "Nic Carter relays a crowdsourced guess that an unspecified rumoured development is a theoretical quantum attack on lattice-based post-quantum cryptography.",
+     "level": "rumour",
+     "source": "x:420308365",
+     "link": "https://x.com/i/web/status/2126448259765776700",
+     "opus_confidence": null
+    },
+    {
      "summary": "Tracked expert @nic_carter relays, secondhand and unverified, that 'chat' thinks a linked item is a quantum attack on Ring-LWE, a lattice assumption.",
      "level": "rumour",
      "source": "x:420308365",
@@ -142,13 +149,6 @@
      "level": "none",
      "source": "https://eprint.iacr.org/rss/rss.xml",
      "link": "https://eprint.iacr.org/2026/3048",
-     "opus_confidence": null
-    },
-    {
-     "summary": "The author replies in a thread with Matthew Green and Yehuda Lindell. They say they do not particularly believe in an AI-driven cryptographic break and see no strong arguments for whether a symmetric or asymmetric break would come first, so this is speculation, not a claim of an actual break.",
-     "level": "rumour",
-     "source": "x:2475066457",
-     "link": "https://x.com/i/web/status/2117319610987147418",
      "opus_confidence": null
     }
    ],
@@ -219,6 +219,13 @@
   }
  },
  "watch": [
+  {
+   "expert": "@nic_carter",
+   "card": "lattice",
+   "summary": "Nic Carter relays a crowdsourced guess that an unspecified rumoured development is a theoretical quantum attack on lattice-based post-quantum cryptography.",
+   "link": "https://x.com/i/web/status/2126448259765776700",
+   "t": 1795819843.442056
+  },
   {
    "expert": "@nic_carter",
    "card": "lattice",
