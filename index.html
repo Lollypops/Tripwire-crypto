@@ -21,14 +21,25 @@
   @media (max-width:700px){
     table,tbody,tr,td{display:block;width:100%}
     tr:first-child{display:none}
+    .w{max-width:100%}
     tr{background:#171a21;border-radius:12px;padding:12px;margin:0 0 12px}
     td{border:0;padding:6px 0;font-size:15px}
     td:first-child{font-size:18px;font-weight:700}
     td:nth-child(2)::before{content:"What it means";display:block;color:#8a8f98;font-size:12px;text-transform:uppercase;letter-spacing:.06em}
     td:nth-child(3)::before{content:"Rate of change and rebuild";display:block;color:#8a8f98;font-size:12px;text-transform:uppercase;letter-spacing:.06em}
     td:nth-child(4)::before{content:"Societal risks";display:block;color:#8a8f98;font-size:12px;text-transform:uppercase;letter-spacing:.06em}
+    .methods td:nth-child(2)::before{content:"Algorithmica: ";display:inline;font-size:inherit;text-transform:none;letter-spacing:0;color:#8a8f98}
+    .methods td:nth-child(3)::before{content:"Heuristica: ";display:inline;font-size:inherit;text-transform:none;letter-spacing:0;color:#8a8f98}
+    .methods td:nth-child(4)::before{content:"Pessiland: ";display:inline;font-size:inherit;text-transform:none;letter-spacing:0;color:#8a8f98}
+    .methods td:nth-child(5)::before{content:"Minicrypt: ";display:inline;font-size:inherit;text-transform:none;letter-spacing:0;color:#8a8f98}
+    .methods td:nth-child(6)::before{content:"Cryptomania: ";display:inline;font-size:inherit;text-transform:none;letter-spacing:0;color:#8a8f98}
+    .methods td:nth-child(7)::before{content:"Likely to outlast: ";display:inline;font-size:inherit;text-transform:none;letter-spacing:0;color:#8a8f98}
+    .methods td{padding:3px 0;font-size:14px}
+    .methods td:first-child{font-size:17px}
   }
   .foot{color:#8a8f98;font-size:13px;margin:24px 0}
+  .hero{display:block;width:100%;height:auto;border-radius:12px;margin:8px 0 16px}
+  .w{display:block;width:100%;max-width:150px;height:auto;border-radius:8px;margin:0 0 6px}
 </style>
 </head>
 <body>
@@ -38,16 +49,32 @@
 <div class="grid" id="grid"></div>
 
 <h2>Which crypto world do we live in?</h2>
+<img class="hero" src="overview.webp" width="1200" height="675" alt="Overview of the five worlds, from Algorithmica (all crypto broken) to Cryptomania (everything works)">
 <p class="sub">Five possible worlds, from Russell Impagliazzo's classic framing. Read the <a href="https://www.quantamagazine.org/which-computational-universe-do-we-live-in-20220418/">Quanta Magazine explainer</a> or the <a href="https://blog.computationalcomplexity.org/2004/06/impagliazzos-five-worlds.html">short original summary by Lance Fortnow</a>. The last two columns are our own rough scenario estimates, not established facts.</p>
 <p class="sub"><b>Theory versus practice.</b> P vs NP is a statement about how running time grows with problem size, in the worst case. It says nothing about whether the algorithm is usable. A fast algorithm can still be too slow in practice (for example n to the power of 1,000), or can be proved to exist without anyone knowing how to write it. So each world below has three versions: <b>theoretical</b> (proved, no usable algorithm), <b>practical</b> (a working, affordable algorithm), and <b>public</b> versus <b>secret</b> (who has it first). Society is hit only by the practical versions, and a secret practical version is the most dangerous, because defences cannot react to what they cannot see.</p>
 <table>
 <tr><th>World</th><th>What it means</th><th>Rate of change and rebuild</th><th>Societal risks</th></tr>
-<tr><td>Algorithmica</td><td>P = NP, or NP inside BPP (fast randomised algorithms, equivalent for attackers); essentially all crypto fails <i>if the algorithm is practical</i>. If it is only theoretical (unusable or non-constructive), day-to-day crypto is unaffected.</td><td>Practical and public: abrupt and total. Rebuild means returning to physical trust (in-person keys, paper, couriers); years, not months, to restore even basic digital trust. Practical but secret: the same damage, but silent at first, so defenders lose before they know. Theoretical only: little near-term change; the main effect is a long period of uncertainty while people watch for a usable version.</td><td>Payments, banking, land and company registries, software updates and secure messaging fail together. Fraud and forgery surge, supply chains stumble, long periods of distrust in digital records.</td></tr>
-<tr><td>Heuristica</td><td>Hard problems exist but are easy on average; crypto fails in practice</td><td>Slower and patchier than Algorithmica: attacks get cheaper over months or years as methods spread. Rebuild is similar, but there is more warning. Practical and public: security erodes in practice even if a few contrived inputs stay hard. Theoretical only: some worst-case instances stay hard, but real keys are not among them, so the effect is close to the practical case.</td><td>Same categories as Algorithmica, hitting weaker systems first; a long period of uncertainty about what is still safe.</td></tr>
-<tr><td>Pessiland</td><td>Hard problems exist but can't be turned into crypto</td><td>No single shock, but no way to rebuild digital trust from maths either. Permanent reliance on physical and institutional trust. Theory versus practice matters little here: hard problems may exist, but a defender cannot use them, so there is nothing practical to rebuild with.</td><td>The digital economy keeps running on trusted intermediaries and in-person checks; high costs and concentrated power.</td></tr>
-<tr><td>Minicrypt</td><td>Hashes and symmetric crypto survive; public-key crypto (RSA, ECC) does not</td><td>Sharp break for signatures, key exchange and web security, but a known toolkit remains (hash-based signatures, pre-shared keys, key servers). Rebuild plausibly takes one to several years, led by critical systems. Practical and public: fast factoring or discrete-log attacks are real and affordable, so RSA and elliptic curves fall while hashes survive. Practical but secret: the largest danger, since a few actors can forge signatures before anyone knows. Theoretical only: public-key crypto keeps working in practice, with a long wait for a usable attack.</td><td>Open-network trust is lost until rebuilt; key servers become single points of failure and control; anything with exposed public keys, including old signed records and coins, is vulnerable immediately.</td></tr>
-<tr><td>Cryptomania</td><td>Everything works: the presumed current world</td><td>Gradual and manageable: migrations to post-quantum schemes happen on planned timelines. The practical risk here is not P vs NP but engineering: large quantum computers, or a classical attack on one specific scheme, not a collapse of the whole world.</td><td>Mainly migration costs and "harvest now, decrypt later" exposure of old recorded data.</td></tr>
+<tr><td><img class="w" src="algorithmica.webp" loading="lazy" width="1200" height="675" alt="Algorithmica">Algorithmica</td><td>A practical, working algorithm exists: P = NP, or NP inside BPP (fast randomised algorithms, equivalent for attackers). Essentially all crypto fails, fast.</td><td>Practical and public: abrupt and total. Rebuild means returning to physical trust (in-person keys, paper, couriers); years, not months, to restore even basic digital trust. Practical but secret: the same damage, but silent at first, so defenders lose before they know.</td><td>Payments, banking, land and company registries, software updates and secure messaging fail together. Fraud and forgery surge, supply chains stumble, long periods of distrust in digital records.</td></tr>
+<tr><td><img class="w" src="heuristica.jpg" loading="lazy" width="1200" height="675" alt="Heuristica">Heuristica</td><td>Hard problems exist but are easy on average; crypto fails in practice</td><td>Slower and patchier than Algorithmica: attacks get cheaper over months or years as methods spread. Rebuild is similar, but there is more warning. Practical and public: security erodes in practice even if a few contrived inputs stay hard. The slow, patchy world: attacks work on average or on real keys but with rough edges, so there is warning time and the weakest systems fall first.</td><td>Same categories as Algorithmica, hitting weaker systems first; a long period of uncertainty about what is still safe.</td></tr>
+<tr><td><img class="w" src="pessiland.webp" loading="lazy" width="1200" height="675" alt="Pessiland">Pessiland</td><td>Hard problems exist but can't be turned into crypto</td><td>No single shock, but no way to rebuild digital trust from maths either. Permanent reliance on physical and institutional trust. Theory versus practice matters little here: hard problems may exist, but a defender cannot use them, so there is nothing practical to rebuild with.</td><td>The digital economy keeps running on trusted intermediaries and in-person checks; high costs and concentrated power.</td></tr>
+<tr><td><img class="w" src="minicrypt.webp" loading="lazy" width="1200" height="675" alt="Minicrypt">Minicrypt</td><td>Hashes and symmetric crypto survive; public-key crypto (RSA, ECC) does not</td><td>Sharp break for signatures, key exchange and web security, but a known toolkit remains (hash-based signatures, pre-shared keys, key servers). Rebuild plausibly takes one to several years, led by critical systems. Practical and public: fast factoring or discrete-log attacks are real and affordable, so RSA and elliptic curves fall while hashes survive. Practical but secret: the largest danger, since a few actors can forge signatures before anyone knows. Theoretical only: public-key crypto keeps working in practice, with a long wait for a usable attack.</td><td>Open-network trust is lost until rebuilt; key servers become single points of failure and control; anything with exposed public keys, including old signed records and coins, is vulnerable immediately.</td></tr>
+<tr><td><img class="w" src="cryptomania.webp" loading="lazy" width="1200" height="675" alt="Cryptomania">Cryptomania</td><td>Everything works: the presumed current world</td><td>Gradual and manageable: migrations to post-quantum schemes happen on planned timelines. The practical risk here is not P vs NP but engineering: large quantum computers, or a classical attack on one specific scheme, not a collapse of the whole world.</td><td>Mainly migration costs and "harvest now, decrypt later" exposure of old recorded data.</td></tr>
 </table>
+<p class="sub"><b>Not a world of its own:</b> a proof that P = NP with no usable algorithm (non-constructive, or too slow to run) changes the theory but not day-to-day security. It is a version of the world we are in now, and worth watching for a usable version.</p>
+
+<h2>Which methods survive in which world?</h2>
+<p class="sub">A rough guide, not a prediction. "Survives" means no known reason to fall in that world; "falls" means it relies on assumptions that world removes. The last column ranks how long each method is likely to hold on.</p>
+<table class="methods">
+<tr><th>Method</th><th>Algorithmica</th><th>Heuristica</th><th>Pessiland</th><th>Minicrypt</th><th>Cryptomania</th><th>Likely to outlast</th></tr>
+<tr><td>RSA</td><td>Falls</td><td>Falls</td><td>Falls</td><td>Falls</td><td>Survives</td><td>Low: also at risk from quantum and fast factoring</td></tr>
+<tr><td>Elliptic curves, secp256k1, Ed25519</td><td>Falls</td><td>Falls</td><td>Falls</td><td>Falls</td><td>Survives</td><td>Low: same exposure as RSA</td></tr>
+<tr><td>Diffie-Hellman</td><td>Falls</td><td>Falls</td><td>Falls</td><td>Falls</td><td>Survives</td><td>Low</td></tr>
+<tr><td>Lattice schemes (ML-KEM, ML-DSA)</td><td>Falls</td><td>Falls</td><td>Falls</td><td>Falls</td><td>Survives</td><td>Medium: built to resist quantum, but newer and less tested</td></tr>
+<tr><td>Hash-based signatures (SPHINCS+)</td><td>Falls</td><td>Falls</td><td>Falls</td><td>Survives</td><td>Survives</td><td>High: security rests only on the hash</td></tr>
+<tr><td>SHA-256 and other hashes</td><td>Falls</td><td>Falls</td><td>Falls</td><td>Survives</td><td>Survives</td><td>High</td></tr>
+<tr><td>AES and other symmetric ciphers</td><td>Falls</td><td>Falls</td><td>Falls</td><td>Survives</td><td>Survives</td><td>Highest: simple, heavily studied, large safety margin</td></tr>
+</table>
+<p class="sub">Pessiland and the worlds above it share one rule: with no one-way functions, nothing survives. In Heuristica a few contrived hard cases may exist, but they are not usable for real keys, so everything erodes in practice.</p>
 
 <div class="foot">Automated, unverified signals from public posts. Not advice. Amber means a credible claim, not a confirmed break.</div>
 
