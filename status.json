@@ -1,5 +1,5 @@
 {
- "updated": 1795818601,
+ "updated": 1795818901,
  "cards": {
   "RSA": {
    "level": "green",
@@ -117,6 +117,13 @@
    "note": "",
    "latest": [
     {
+     "summary": "Tracked expert @nic_carter relays, secondhand and unverified, that 'chat' thinks a linked item is a quantum attack on Ring-LWE, a lattice assumption.",
+     "level": "rumour",
+     "source": "x:420308365",
+     "link": "https://x.com/i/web/status/2126442746193825829",
+     "opus_confidence": null
+    },
+    {
      "summary": "An eprint shows the Distorted McEliece Public Key assumption of Dyseryn-Francati-Venturi pseudorandom codes is false for full-support Raw Reed-Solomon codes, since a parity check distinguishes the key, but it gives no key recovery or ciphertext-level break and does not affect standard deployed cryptography.",
      "level": "claimed",
      "source": "https://eprint.iacr.org/rss/rss.xml",
@@ -142,13 +149,6 @@
      "level": "rumour",
      "source": "x:2475066457",
      "link": "https://x.com/i/web/status/2117319610987147418",
-     "opus_confidence": null
-    },
-    {
-     "summary": "Bernstein's blog post discusses gaps between marketing claims and reality in lattice-crypto security (modules, asymptotics, worst-case), but it reports no break or new attack and shows no unusual anxiety or call to act.",
-     "level": "none",
-     "source": "https://blog.cr.yp.to/feed.application=xml",
-     "link": "http://blog.cr.yp.to/20260630-risk.html",
      "opus_confidence": null
     }
    ],
@@ -219,6 +219,13 @@
   }
  },
  "watch": [
+  {
+   "expert": "@nic_carter",
+   "card": "lattice",
+   "summary": "Tracked expert @nic_carter relays, secondhand and unverified, that 'chat' thinks a linked item is a quantum attack on Ring-LWE, a lattice assumption.",
+   "link": "https://x.com/i/web/status/2126442746193825829",
+   "t": 1795818646.3293028
+  },
   {
    "expert": "@rynorhn",
    "card": "general",
