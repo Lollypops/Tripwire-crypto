@@ -24,13 +24,14 @@
 <div class="grid" id="grid"></div>
 
 <h2 style="margin-top:40px">Which crypto world do we live in?</h2>
+<p class="sub">Five possible worlds, from Russell Impagliazzo's classic framing. Read the <a href="https://www.quantamagazine.org/which-computational-universe-do-we-live-in-20220418/">Quanta Magazine explainer</a> or the <a href="https://blog.computationalcomplexity.org/2004/06/impagliazzos-five-worlds.html">short original summary by Lance Fortnow</a>. The last two columns are our own rough scenario estimates, not established facts.</p>
 <table>
-<tr><th>World</th><th>What it means</th></tr>
-<tr><td>Algorithmica</td><td>P = NP; essentially all crypto fails</td></tr>
-<tr><td>Heuristica</td><td>Hard problems exist but are easy on average; crypto fails in practice</td></tr>
-<tr><td>Pessiland</td><td>Hard problems exist but can't be turned into crypto</td></tr>
-<tr><td>Minicrypt</td><td>Hashes and symmetric crypto survive; public-key crypto (RSA, ECC) does not</td></tr>
-<tr><td>Cryptomania</td><td>Everything works: the presumed current world</td></tr>
+<tr><th>World</th><th>What it means</th><th>Rate of change and rebuild</th><th>Societal risks</th></tr>
+<tr><td>Algorithmica</td><td>P = NP; essentially all crypto fails</td><td>Abrupt and total once a practical algorithm is public. Rebuild means returning to physical trust: in-person keys, paper, couriers. Years, not months, to restore even basic digital trust.</td><td>Payments, banking, land and company registries, software updates and secure messaging fail together. Fraud and forgery surge, supply chains stumble, long periods of distrust in digital records.</td></tr>
+<tr><td>Heuristica</td><td>Hard problems exist but are easy on average; crypto fails in practice</td><td>Slower and patchier than Algorithmica: attacks get cheaper over months or years as methods spread. Rebuild is similar, but there is more warning.</td><td>Same categories as Algorithmica, hitting weaker systems first; a long period of uncertainty about what is still safe.</td></tr>
+<tr><td>Pessiland</td><td>Hard problems exist but can't be turned into crypto</td><td>No single shock, but no way to rebuild digital trust from maths either. Permanent reliance on physical and institutional trust.</td><td>The digital economy keeps running on trusted intermediaries and in-person checks; high costs and concentrated power.</td></tr>
+<tr><td>Minicrypt</td><td>Hashes and symmetric crypto survive; public-key crypto (RSA, ECC) does not</td><td>Sharp break for signatures, key exchange and web security, but a known toolkit remains (hash-based signatures, pre-shared keys, key servers). Rebuild plausibly takes one to several years, led by critical systems.</td><td>Open-network trust is lost until rebuilt; key servers become single points of failure and control; anything with exposed public keys, including old signed records and coins, is vulnerable immediately.</td></tr>
+<tr><td>Cryptomania</td><td>Everything works: the presumed current world</td><td>Gradual and manageable: migrations to post-quantum schemes happen on planned timelines.</td><td>Mainly migration costs and "harvest now, decrypt later" exposure of old recorded data.</td></tr>
 </table>
 
 <div class="foot">Automated, unverified signals from public posts. Not advice. Amber means a credible claim, not a confirmed break.</div>
