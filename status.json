@@ -1,5 +1,5 @@
 {
- "updated": 1795810501,
+ "updated": 1795810801,
  "cards": {
   "RSA": {
    "level": "green",
@@ -192,7 +192,15 @@
   "general": {
    "level": "green",
    "note": "",
-   "latest": [],
+   "latest": [
+    {
+     "summary": "A commenter links an eprint (2026/3020) claiming a deterministic subexponential-time discrete log algorithm and remarks on it casually, without urging action; the rest of the comment is unrelated complexity-theory talk.",
+     "level": "claimed",
+     "source": "https://scottaaronson.blog/?feed=comments-rss2",
+     "link": "https://scottaaronson.blog/?p=10379#comment-2044972",
+     "opus_confidence": null
+    }
+   ],
    "world": ""
   }
  },
