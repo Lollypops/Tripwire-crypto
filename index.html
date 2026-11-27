@@ -58,7 +58,8 @@ const WHY = {
   secp256k1: "The curve behind Bitcoin and Ethereum keys.",
   hash: "Fingerprints for mining, addresses, passwords, integrity.",
   lattice: "Basis of the new post-quantum standards (ML-KEM, ML-DSA).",
-  PvsNP: "If P = NP in practice, nearly all public-key crypto fails together."
+  PvsNP: "If P = NP in practice, nearly all public-key crypto fails together.",
+  general: "Broad statements about cryptography that name no single primitive."
 };
 const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 async function load(){
@@ -69,8 +70,9 @@ async function load(){
     document.getElementById("watch").innerHTML = (s.watch && s.watch.length) ? '<h2>Expert watch</h2>' + s.watch.map(w => `<div class="ev"><b>${esc(w.expert)}</b> (${esc(w.card)}): ${esc(w.summary)} ${/^https?:/.test(w.link) ? `<a href="${esc(w.link)}" target="_blank" rel="noopener">link</a>` : ""}</div>`).join("") : "";
     document.getElementById("grid").innerHTML = Object.entries(s.cards).map(([name,c]) => `
       <div class="card ${esc(c.level)}">
-        <div class="lvl">${esc(({PvsNP:"P vs NP"})[name]||name)} — ${esc(c.level)}</div>
+        <div class="lvl">${esc(({PvsNP:"P vs NP",general:"General"})[name]||name)} — ${esc(c.level)}</div>
         <div class="why">${esc(WHY[name]||"")}</div>
+        ${c.world ? `<div class="ev"><b>Points towards:</b> ${esc(c.world)}${c.world==="unclear" ? "" : " (rough guide)"}</div>` : ""}
         ${c.note ? `<div class="ev"><b>Note:</b> ${esc(c.note)}</div>` : ""}
         ${(c.level === "green" ? [] : c.latest).map(e => `<div class="ev">${esc(e.summary)}
           ${e.opus_confidence!=null ? `(plausibility ${esc(e.opus_confidence)}%)` : ""}

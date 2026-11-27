@@ -1,5 +1,5 @@
 {
- "updated": 1795797601,
+ "updated": 1795797855,
  "cards": {
   "RSA": {
    "level": "green",
@@ -40,7 +40,8 @@
      "link": "https://x.com/i/web/status/2125623954429907410",
      "opus_confidence": null
     }
-   ]
+   ],
+   "world": ""
   },
   "ECC": {
    "level": "green",
@@ -53,12 +54,14 @@
      "link": "https://scottaaronson.blog/?p=10379#comment-2044922",
      "opus_confidence": null
     }
-   ]
+   ],
+   "world": ""
   },
   "secp256k1": {
    "level": "green",
    "note": "",
-   "latest": []
+   "latest": [],
+   "world": ""
   },
   "hash": {
    "level": "green",
@@ -99,7 +102,8 @@
      "link": "https://x.com/i/web/status/2117319610987147418",
      "opus_confidence": null
     }
-   ]
+   ],
+   "world": ""
   },
   "lattice": {
    "level": "green",
@@ -140,7 +144,8 @@
      "link": "http://blog.cr.yp.to/20260630-risk.html",
      "opus_confidence": null
     }
-   ]
+   ],
+   "world": ""
   },
   "PvsNP": {
    "level": "green",
@@ -181,7 +186,14 @@
      "link": "https://scottaaronson.blog/?p=10379#comment-2044671",
      "opus_confidence": null
     }
-   ]
+   ],
+   "world": ""
+  },
+  "general": {
+   "level": "green",
+   "note": "",
+   "latest": [],
+   "world": ""
   }
  },
  "watch": []
