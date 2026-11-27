@@ -1,5 +1,5 @@
 {
- "updated": 1795797301,
+ "updated": 1795797348,
  "cards": {
   "RSA": {
    "level": "green",
@@ -146,6 +146,13 @@
    "level": "green",
    "note": "",
    "latest": [
+    {
+     "summary": "A commenter gives a general explanation that factoring is in NP and coNP, so it is not believed NP-complete and could be in P even if P\u2260NP; it reports no break.",
+     "level": "none",
+     "source": "https://scottaaronson.blog/?feed=comments-rss2",
+     "link": "https://scottaaronson.blog/?p=10379#comment-2044960",
+     "opus_confidence": null
+    },
     {
      "summary": "The author argues that P vs NP debates are meaningless for practical security, noting that even a hypothetical polynomial-time factoring algorithm with a huge exponent like O((log n)^25) wouldn't weaken RSA in practice, and does not claim any actual break.",
      "level": "none",
