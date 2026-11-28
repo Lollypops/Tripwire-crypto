@@ -1,5 +1,5 @@
 {
- "updated": 1795885502,
+ "updated": 1795885801,
  "cards": {
   "RSA": {
    "level": "amber",
@@ -279,19 +279,19 @@
  "markets": [
   {
    "label": "An AI lab announces it has solved P vs NP in 2026",
-   "yes": 9.0,
-   "day": -5.5,
-   "week": 4.5,
+   "yes": 9.2,
+   "day": -2.9,
+   "week": 4.7,
    "volume": 518990,
    "closed": false,
    "disputed": false,
    "url": "https://polymarket.com/event/which-math-problems-will-ai-solve-in-2026",
-   "flag": "amber"
+   "flag": "green"
   },
   {
    "label": "An AI lab announces it has solved the Riemann Hypothesis in 2026",
    "yes": 76.5,
-   "day": 12.0,
+   "day": 11.0,
    "week": -2.5,
    "volume": 734264,
    "closed": false,
