@@ -1,5 +1,5 @@
 {
- "updated": 1795884301,
+ "updated": 1795884601,
  "cards": {
   "RSA": {
    "level": "amber",
@@ -323,9 +323,9 @@
   },
   {
    "label": "Bitcoin activates a quantum-resistant upgrade in 2026",
-   "yes": 3.6,
-   "day": -1.6,
-   "week": -1.6,
+   "yes": 3.5,
+   "day": -1.7,
+   "week": -1.7,
    "volume": 4104,
    "closed": false,
    "disputed": false,
