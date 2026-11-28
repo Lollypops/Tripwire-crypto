@@ -1,10 +1,17 @@
 {
- "updated": 1795874101,
+ "updated": 1795874401,
  "cards": {
   "RSA": {
-   "level": "green",
+   "level": "amber",
    "note": "",
    "latest": [
+    {
+     "summary": "A commenter relays an FT leader and Bank of England Governor Andrew Bailey comments on AI and quantum threats to RSA, calling it close to a 'five alarm fire' while urging faster upgrades rather than panic.",
+     "level": "rumour",
+     "source": "https://scottaaronson.blog/?feed=comments-rss2",
+     "link": "https://scottaaronson.blog/?p=10387#comment-2045087",
+     "opus_confidence": 70
+    },
     {
      "summary": "Tracked expert Lance Fortnow says rumors about cryptography are circulating and advises monitoring the RSA Challenge factoring problems as early indicators, with fast progress such as factoring 1536-bit numbers being the alarm threshold.",
      "level": "rumour",
@@ -32,16 +39,9 @@
      "source": "x:1013834266906714112",
      "link": "https://x.com/i/web/status/2125781218512060865",
      "opus_confidence": null
-    },
-    {
-     "summary": "The author says a hypothetical proof that factoring is in P would not change their beliefs, since factoring has so much structure that it seems surprising it is not already in P, and it would not affect their belief that learning parity with noise is hard; this is a hypothetical, with no break claimed or reported.",
-     "level": "none",
-     "source": "x:883024018009456640",
-     "link": "https://x.com/i/web/status/2125684982693965863",
-     "opus_confidence": null
     }
    ],
-   "world": ""
+   "world": "Minicrypt"
   },
   "ECC": {
    "level": "green",
