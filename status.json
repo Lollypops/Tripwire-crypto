@@ -1,5 +1,5 @@
 {
- "updated": 1795881901,
+ "updated": 1795882202,
  "cards": {
   "RSA": {
    "level": "amber",
@@ -279,10 +279,10 @@
  "markets": [
   {
    "label": "An AI lab announces it has solved P vs NP in 2026",
-   "yes": 8.9,
-   "day": -6.4,
-   "week": 4.5,
-   "volume": 518521,
+   "yes": 8.8,
+   "day": -6.6,
+   "week": 4.2,
+   "volume": 518566,
    "closed": false,
    "disputed": false,
    "url": "https://polymarket.com/event/which-math-problems-will-ai-solve-in-2026",
@@ -290,10 +290,10 @@
   },
   {
    "label": "An AI lab announces it has solved the Riemann Hypothesis in 2026",
-   "yes": 73.0,
-   "day": 8.5,
-   "week": -6.0,
-   "volume": 732863,
+   "yes": 74.0,
+   "day": 9.5,
+   "week": -5.0,
+   "volume": 732897,
    "closed": false,
    "disputed": true,
    "url": "https://polymarket.com/event/which-math-problems-will-ai-solve-in-2026",
@@ -323,9 +323,9 @@
   },
   {
    "label": "Bitcoin activates a quantum-resistant upgrade in 2026",
-   "yes": 5.1,
-   "day": -0.1,
-   "week": -0.1,
+   "yes": 3.8,
+   "day": -1.5,
+   "week": -1.5,
    "volume": 4104,
    "closed": false,
    "disputed": false,
