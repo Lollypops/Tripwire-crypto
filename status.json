@@ -1,5 +1,5 @@
 {
- "updated": 1795879201,
+ "updated": 1795879502,
  "cards": {
   "RSA": {
    "level": "amber",
@@ -283,14 +283,14 @@
   },
   {
    "label": "An AI lab announces it has solved the Riemann Hypothesis in 2026",
-   "yes": 73.5,
-   "day": 10.0,
-   "week": -5.5,
+   "yes": 74.5,
+   "day": 11.0,
+   "week": -4.5,
    "volume": 731267,
    "closed": false,
    "disputed": true,
    "url": "https://polymarket.com/event/which-math-problems-will-ai-solve-in-2026",
-   "flag": "amber"
+   "flag": "red"
   },
   {
    "label": "A quantum computer breaks a Bitcoin key by end of 2026",
@@ -316,10 +316,10 @@
   },
   {
    "label": "Bitcoin activates a quantum-resistant upgrade in 2026",
-   "yes": 6.2,
-   "day": 1.0,
-   "week": 1.0,
-   "volume": 4096,
+   "yes": 6.1,
+   "day": 0.9,
+   "week": 0.9,
+   "volume": 4104,
    "closed": false,
    "disputed": false,
    "url": "https://polymarket.com/event/bitcoin-quantum-resistant-upgrade-implemented-in-2026",
