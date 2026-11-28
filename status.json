@@ -1,5 +1,5 @@
 {
- "updated": 1795884601,
+ "updated": 1795884901,
  "cards": {
   "RSA": {
    "level": "amber",
@@ -323,9 +323,9 @@
   },
   {
    "label": "Bitcoin activates a quantum-resistant upgrade in 2026",
-   "yes": 3.5,
-   "day": -1.7,
-   "week": -1.7,
+   "yes": 3.2,
+   "day": -1.9,
+   "week": -1.9,
    "volume": 4104,
    "closed": false,
    "disputed": false,
@@ -335,7 +335,7 @@
   {
    "label": "Bitcoin replaces SHA-256 before 2027",
    "yes": 1.9,
-   "day": 0.0,
+   "day": 0.1,
    "week": 0.1,
    "volume": 199507,
    "closed": false,
