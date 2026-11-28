@@ -1,5 +1,5 @@
 {
- "updated": 1795879502,
+ "updated": 1795879593,
  "cards": {
   "RSA": {
    "level": "amber",
@@ -275,7 +275,7 @@
    "yes": 8.8,
    "day": -6.3,
    "week": 4.3,
-   "volume": 509908,
+   "volume": 510020,
    "closed": false,
    "disputed": false,
    "url": "https://polymarket.com/event/which-math-problems-will-ai-solve-in-2026",
@@ -286,7 +286,7 @@
    "yes": 74.5,
    "day": 11.0,
    "week": -4.5,
-   "volume": 731267,
+   "volume": 731767,
    "closed": false,
    "disputed": true,
    "url": "https://polymarket.com/event/which-math-problems-will-ai-solve-in-2026",

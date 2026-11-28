@@ -1,4 +1,4 @@
-k<!doctype html>
+<!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
@@ -41,6 +41,15 @@ k<!doctype html>
   .sh{display:none}
   @media (max-width:640px){table.m{font-size:13px}.fl{display:none}.sh{display:inline}table.m td,table.m th{padding:8px 3px}}
   .foot{color:#8a8f98;font-size:13px;margin:32px 0}
+  #ai{padding:16px 0 24px}
+  #ai img{display:block;width:100%;height:auto;border-radius:12px;margin:16px 0 8px}
+  #ai .cap{color:#8a8f98;font-size:13px}
+  #ai ol{padding-left:20px;margin:12px 0}
+  #ai li{margin:6px 0}
+  #ai svg{display:block;width:100%;height:auto;margin:16px 0 8px}
+  .legend{display:flex;flex-wrap:wrap;gap:8px 20px;font-size:14px;color:#cfd3d9;margin:8px 0 4px}
+  .legend i{display:inline-block;width:26px;height:4px;border-radius:2px;margin-right:8px;vertical-align:middle}
+  .legend i.dash{background:repeating-linear-gradient(90deg,#e6e6e6 0 6px,transparent 6px 11px)}
   #markets{padding:8px 0 48px}
   .mk{display:flex;justify-content:space-between;align-items:center;gap:16px;background:#171a21;border-radius:12px;padding:14px 16px;margin:10px 0}
   .mk small{display:block;color:#8a8f98;font-size:13px;margin-top:4px}
@@ -146,6 +155,49 @@ k<!doctype html>
   </table>
   <p>First to go: RSA and elliptic curves. Last line of defence: hashes and AES.</p>
 </main>
+
+<section id="ai">
+  <h2>How AI risk may play out for crypto</h2>
+  <p class="sub">One view of how AI-assisted attacks could unfold: crypto is hit first, then hardens faster than traditional finance. Read the shapes, not the numbers.</p>
+  <svg viewBox="0 0 640 370" role="img" aria-label="Conceptual chart of exposure to AI-assisted attacks over time. Crypto starts exposed and peaks early, then falls below traditional finance once AI audits and verification become standard. A floor of risk in keys, front-ends and people never hardens.">
+    <rect x="0" y="0" width="640" height="370" rx="14" fill="#171a21"/>
+    <rect x="40" y="30" width="200" height="304" fill="#1d212b"/>
+    <rect x="240" y="30" width="200" height="304" fill="#171a21"/>
+    <rect x="440" y="30" width="180" height="304" fill="#1d212b"/>
+    <text x="40" y="20" font-size="14" fill="#8a8f98">Exposure to AI-assisted attacks (higher is worse)</text>
+    <text x="52" y="60" font-size="30" font-weight="700" fill="#e6e6e6">1</text>
+    <text x="76" y="58" font-size="15" fill="#cfd3d9">Attackers first</text>
+    <text x="252" y="60" font-size="30" font-weight="700" fill="#e6e6e6">2</text>
+    <text x="276" y="58" font-size="15" fill="#cfd3d9">Defenders catch up</text>
+    <text x="452" y="60" font-size="30" font-weight="700" fill="#e6e6e6">3</text>
+    <text x="476" y="58" font-size="15" fill="#cfd3d9">Hardened</text>
+    <line x1="40" y1="334" x2="620" y2="334" stroke="#3a3f4a" stroke-width="2"/>
+    <line x1="40" y1="30" x2="40" y2="334" stroke="#3a3f4a" stroke-width="2"/>
+    <path d="M40 255 C 130 252, 230 232, 300 215 C 370 198, 430 182, 500 180 C 550 178, 590 180, 620 181" fill="none" stroke="#9aa0a8" stroke-width="4" stroke-linecap="round"/>
+    <path d="M40 290 C 130 280, 220 278, 300 285 C 400 295, 520 300, 620 300" fill="none" stroke="#e6e6e6" stroke-width="3" stroke-dasharray="7 6" stroke-linecap="round"/>
+    <path d="M40 170 C 70 140, 100 92, 130 92 C 190 92, 235 165, 300 215 C 360 260, 460 280, 620 290" fill="none" stroke="#4c8dff" stroke-width="4" stroke-linecap="round"/>
+    <text x="130" y="80" font-size="15" text-anchor="middle" fill="#cfd3d9">Peak AI exploit risk</text>
+    <line x1="300" y1="206" x2="300" y2="124" stroke="#8a8f98" stroke-width="2" stroke-dasharray="3 3"/>
+    <circle cx="300" cy="215" r="7" fill="#0f1115" stroke="#ffffff" stroke-width="3"/>
+    <text x="308" y="130" font-size="15" fill="#e6e6e6">Crossover:</text>
+    <text x="308" y="148" font-size="15" fill="#e6e6e6">crypto looks safer</text>
+    <text x="308" y="166" font-size="15" fill="#e6e6e6">than traditional finance</text>
+    <text x="612" y="322" font-size="15" text-anchor="end" fill="#cfd3d9">Risk that never hardens</text>
+    <text x="40" y="356" font-size="15" fill="#8a8f98">Today</text>
+    <text x="620" y="356" font-size="15" text-anchor="end" fill="#8a8f98">Time →</text>
+  </svg>
+  <div class="legend">
+    <span><i style="background:#4c8dff"></i>Crypto (open, immutable code)</span>
+    <span><i style="background:#9aa0a8"></i>Traditional finance (closed, legacy code)</span>
+    <span><i class="dash"></i>Floor: keys, front-ends and people</span>
+  </div>
+  <ol>
+    <li><b>AI offence first.</b> Open code is scanned first, and losses on-chain are final.</li>
+    <li><b>AI defence catches up.</b> AI audits and formal verification become the default.</li>
+    <li><b>Hardened.</b> Verified contracts last. The risk that never hardens sits in keys, front-ends and people.</li>
+  </ol>
+  <p class="cap">Our own conceptual redraw of an idea from Delphi Digital's Figure 25. Not measured data and not a forecast: the shape, not the level, is the claim, and the timing of the crossover is uncertain.</p>
+</section>
 
 <div class="foot">Automated, unverified signals from public posts. Not advice. Amber means a credible claim, not a confirmed break.</div>
 </div>
