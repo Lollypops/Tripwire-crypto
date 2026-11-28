@@ -1,5 +1,5 @@
 {
- "updated": 1795836601,
+ "updated": 1795836901,
  "cards": {
   "RSA": {
    "level": "green",
@@ -117,6 +117,13 @@
    "note": "",
    "latest": [
     {
+     "summary": "An ePrint paper claims a single-trace power side-channel attack on the FALCON-1024 key decoding routine that recovers the full secret key on an ARM Cortex-M4 for all 1000 tested keys, in about 11 seconds on average.",
+     "level": "claimed",
+     "source": "https://eprint.iacr.org/rss/rss.xml",
+     "link": "https://eprint.iacr.org/2026/2908",
+     "opus_confidence": null
+    },
+    {
      "summary": "Nic Carter relays a crowdsourced guess that an unspecified rumoured development is a theoretical quantum attack on lattice-based post-quantum cryptography.",
      "level": "rumour",
      "source": "x:420308365",
@@ -142,13 +149,6 @@
      "level": "none",
      "source": "https://eprint.iacr.org/rss/rss.xml",
      "link": "https://eprint.iacr.org/2026/3059",
-     "opus_confidence": null
-    },
-    {
-     "summary": "An eprint paper presents an incremental optimization of critical-pair selection in the F4 Gr\u00f6bner basis algorithm, cutting MQ-solving time by 35-67% on small weakly overdetermined instances over F_31; this is routine algorithmic work with no claimed break of any cryptosystem.",
-     "level": "none",
-     "source": "https://eprint.iacr.org/rss/rss.xml",
-     "link": "https://eprint.iacr.org/2026/3048",
      "opus_confidence": null
     }
    ],
