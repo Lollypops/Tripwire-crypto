@@ -1,5 +1,5 @@
 {
- "updated": 1795830301,
+ "updated": 1795830602,
  "cards": {
   "RSA": {
    "level": "green",
@@ -200,6 +200,13 @@
    "level": "green",
    "note": "",
    "latest": [
+    {
+     "summary": "A commenter asks Scott Aaronson whether circulating, less-confident break rumours concern only RSA or also touch post-quantum protocols, without reporting a specific break themselves.",
+     "level": "rumour",
+     "source": "https://scottaaronson.blog/?feed=comments-rss2",
+     "link": "https://scottaaronson.blog/?p=10387#comment-2045027",
+     "opus_confidence": null
+    },
     {
      "summary": "A commenter sarcastically speculates that frontier AI labs have secretly broken unspecified cryptographic protocols and profit from forcing everyone onto replacements.",
      "level": "rumour",
