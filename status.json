@@ -1,5 +1,5 @@
 {
- "updated": 1795886701,
+ "updated": 1795887001,
  "cards": {
   "RSA": {
    "level": "amber",
@@ -290,9 +290,9 @@
   },
   {
    "label": "An AI lab announces it has solved the Riemann Hypothesis in 2026",
-   "yes": 73.0,
-   "day": 7.5,
-   "week": -6.0,
+   "yes": 74.0,
+   "day": 8.5,
+   "week": -5.0,
    "volume": 734352,
    "closed": false,
    "disputed": true,
