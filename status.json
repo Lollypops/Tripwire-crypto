@@ -1,5 +1,5 @@
 {
- "updated": 1795885201,
+ "updated": 1795885502,
  "cards": {
   "RSA": {
    "level": "amber",
@@ -323,19 +323,19 @@
   },
   {
    "label": "Bitcoin activates a quantum-resistant upgrade in 2026",
-   "yes": 3.4,
-   "day": -1.8,
-   "week": -1.8,
+   "yes": 3.2,
+   "day": -5.3,
+   "week": -1.9,
    "volume": 4104,
    "closed": false,
    "disputed": false,
    "url": "https://polymarket.com/event/bitcoin-quantum-resistant-upgrade-implemented-in-2026",
-   "flag": "green"
+   "flag": "amber"
   },
   {
    "label": "Bitcoin replaces SHA-256 before 2027",
    "yes": 1.9,
-   "day": 0.1,
+   "day": 0.0,
    "week": 0.1,
    "volume": 199507,
    "closed": false,
