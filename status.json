@@ -1,5 +1,5 @@
 {
- "updated": 1795882801,
+ "updated": 1795883101,
  "cards": {
   "RSA": {
    "level": "amber",
@@ -282,7 +282,7 @@
    "yes": 8.8,
    "day": -6.6,
    "week": 4.2,
-   "volume": 518566,
+   "volume": 518981,
    "closed": false,
    "disputed": false,
    "url": "https://polymarket.com/event/which-math-problems-will-ai-solve-in-2026",
@@ -293,7 +293,7 @@
    "yes": 74.0,
    "day": 9.5,
    "week": -5.0,
-   "volume": 732897,
+   "volume": 733598,
    "closed": false,
    "disputed": true,
    "url": "https://polymarket.com/event/which-math-problems-will-ai-solve-in-2026",
@@ -323,9 +323,9 @@
   },
   {
    "label": "Bitcoin activates a quantum-resistant upgrade in 2026",
-   "yes": 4.2,
-   "day": -0.9,
-   "week": -0.9,
+   "yes": 5.0,
+   "day": -0.2,
+   "week": -0.2,
    "volume": 4104,
    "closed": false,
    "disputed": false,
