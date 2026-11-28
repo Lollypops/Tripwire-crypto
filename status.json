@@ -1,5 +1,5 @@
 {
- "updated": 1795878902,
+ "updated": 1795879201,
  "cards": {
   "RSA": {
    "level": "amber",
@@ -273,7 +273,7 @@
   {
    "label": "An AI lab announces it has solved P vs NP in 2026",
    "yes": 8.8,
-   "day": -6.2,
+   "day": -6.3,
    "week": 4.3,
    "volume": 509908,
    "closed": false,
@@ -316,9 +316,9 @@
   },
   {
    "label": "Bitcoin activates a quantum-resistant upgrade in 2026",
-   "yes": 7.3,
-   "day": 2.1,
-   "week": 2.1,
+   "yes": 6.2,
+   "day": 1.0,
+   "week": 1.0,
    "volume": 4096,
    "closed": false,
    "disputed": false,
