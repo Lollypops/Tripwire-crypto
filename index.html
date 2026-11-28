@@ -1,4 +1,4 @@
-<!doctype html>
+k<!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
@@ -41,6 +41,11 @@
   .sh{display:none}
   @media (max-width:640px){table.m{font-size:13px}.fl{display:none}.sh{display:inline}table.m td,table.m th{padding:8px 3px}}
   .foot{color:#8a8f98;font-size:13px;margin:32px 0}
+  #markets{padding:8px 0 48px}
+  .mk{display:flex;justify-content:space-between;align-items:center;gap:16px;background:#171a21;border-radius:12px;padding:14px 16px;margin:10px 0}
+  .mk small{display:block;color:#8a8f98;font-size:13px;margin-top:4px}
+  .mk .pct{font-size:30px;font-weight:700;min-width:84px;text-align:right}
+  .mk{border-left:8px solid #2e7d32} .mk.amber{border-left-color:#f9a825} .mk.red{border-left-color:#c62828}
 </style>
 </head>
 <body>
@@ -55,6 +60,12 @@
   <div class="grid" id="grid"></div>
   <a class="more" href="#worlds">Which crypto world do we live in? ↓</a>
 </header>
+
+<section id="markets" style="display:none">
+  <h2>What the betting markets say</h2>
+  <p class="sub">Live odds from Polymarket. These are real-money bets, but several are thin markets with little trading, so treat them as a rough signal, not a forecast. Not betting advice. The coloured bar shows the 24-hour move: red is more than 10 points, amber is 5 to 10, green is under 5.</p>
+  <div id="mlist"></div>
+</section>
 
 <main id="worlds">
   <div class="intro">
@@ -164,6 +175,9 @@ async function load(){
       : worst === "red" ? "Red: a verified break has been reported"
       : (worst === "amber-high" ? "Amber-high: " : "Watching: ") + n + (n === 1 ? " card" : " cards") + " on alert";
     document.getElementById("watch").innerHTML = (s.watch && s.watch.length) ? '<h2>Expert watch</h2>' + s.watch.map(w => `<div class="ev"><b>${esc(w.expert)}</b> (${esc(w.card)}): ${esc(w.summary)} ${/^https?:/.test(w.link) ? `<a href="${esc(w.link)}" target="_blank" rel="noopener">link</a>` : ""}</div>`).join("") : "";
+    const mk = s.markets || [];
+    document.getElementById("markets").style.display = mk.length ? "block" : "none";
+    document.getElementById("mlist").innerHTML = mk.map(m => `<div class="mk ${esc(m.flag || "green")}"><div><a href="${esc(m.url)}" target="_blank" rel="noopener">${esc(m.label)}</a><small>${(m.day ?? 0) > 0 ? "+" : ""}${esc(m.day ?? 0)} points in 24h · ${m.week > 0 ? "+" : ""}${esc(m.week)} this week · $${esc(Number(m.volume).toLocaleString())} traded${m.volume < 20000 ? " · thin market" : ""}${m.disputed ? " · resolution disputed" : ""}${m.closed ? " · closed" : ""}</small></div><div class="pct">${esc(m.yes)}%</div></div>`).join("");
     document.getElementById("grid").innerHTML = Object.entries(s.cards).map(([name,c]) => `
       <div class="card ${esc(c.level)}">
         <div class="lvl">${esc(({PvsNP:"P vs NP",general:"General"})[name]||name)} — ${esc(c.level)}</div>
