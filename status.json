@@ -1,5 +1,5 @@
 {
- "updated": 1795860601,
+ "updated": 1795860901,
  "cards": {
   "RSA": {
    "level": "green",
@@ -47,6 +47,13 @@
    "level": "green",
    "note": "",
    "latest": [
+    {
+     "summary": "An eprint paper claims a deterministic subexponential-time (p^{o(1)}) discrete log algorithm for elliptic curves over prime fields and for F_p^*, conditional on an assumed OpenAI tensor-contraction construction, and says its proofs are Lean-verified.",
+     "level": "claimed",
+     "source": "https://eprint.iacr.org/rss/rss.xml",
+     "link": "https://eprint.iacr.org/2026/3020",
+     "opus_confidence": null
+    },
     {
      "summary": "A commenter hypothesizes how someone with an efficient elliptic curve discrete log algorithm could profit secretly (e.g., minting Monero, stealing old coins) and suggests signals to monitor, without claiming any real break.",
      "level": "none",
