@@ -1,5 +1,5 @@
 {
- "updated": 1795887001,
+ "updated": 1795887301,
  "cards": {
   "RSA": {
    "level": "amber",
@@ -280,19 +280,19 @@
   {
    "label": "An AI lab announces it has solved P vs NP in 2026",
    "yes": 8.8,
-   "day": -3.3,
+   "day": -5.5,
    "week": 4.2,
    "volume": 519132,
    "closed": false,
    "disputed": false,
    "url": "https://polymarket.com/event/which-math-problems-will-ai-solve-in-2026",
-   "flag": "green"
+   "flag": "amber"
   },
   {
    "label": "An AI lab announces it has solved the Riemann Hypothesis in 2026",
-   "yes": 74.0,
-   "day": 8.5,
-   "week": -5.0,
+   "yes": 74.5,
+   "day": 9.0,
+   "week": -4.5,
    "volume": 734352,
    "closed": false,
    "disputed": true,
@@ -324,8 +324,8 @@
   {
    "label": "Bitcoin activates a quantum-resistant upgrade in 2026",
    "yes": 3.2,
-   "day": -5.3,
-   "week": -1.9,
+   "day": -5.1,
+   "week": -2.0,
    "volume": 4104,
    "closed": false,
    "disputed": false,
