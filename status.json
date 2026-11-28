@@ -1,5 +1,5 @@
 {
- "updated": 1795827001,
+ "updated": 1795827301,
  "cards": {
   "RSA": {
    "level": "green",
@@ -200,6 +200,13 @@
    "level": "green",
    "note": "",
    "latest": [
+    {
+     "summary": "A commenter sarcastically speculates that frontier AI labs have secretly broken unspecified cryptographic protocols and profit from forcing everyone onto replacements.",
+     "level": "rumour",
+     "source": "https://scottaaronson.blog/?feed=comments-rss2",
+     "link": "https://scottaaronson.blog/?p=10387#comment-2045016",
+     "opus_confidence": null
+    },
     {
      "summary": "The tracked expert relays Scott Aaronson's statements that a major cryptographic breakthrough is expected to be disclosed soon, that it does not immediately threaten RSA, and that rumours of more consequential breaks persist.",
      "level": "rumour",
