@@ -1,5 +1,5 @@
 {
- "updated": 1795882501,
+ "updated": 1795882801,
  "cards": {
   "RSA": {
    "level": "amber",
@@ -335,7 +335,7 @@
   {
    "label": "Bitcoin replaces SHA-256 before 2027",
    "yes": 1.9,
-   "day": 0.0,
+   "day": -0.1,
    "week": 0.1,
    "volume": 199507,
    "closed": false,
