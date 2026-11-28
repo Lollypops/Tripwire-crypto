@@ -1,5 +1,5 @@
 {
- "updated": 1795878301,
+ "updated": 1795878637,
  "cards": {
   "RSA": {
    "level": "amber",
@@ -267,6 +267,74 @@
    "summary": "Tracked expert Lance Fortnow says rumors about cryptography are circulating and advises monitoring the RSA Challenge factoring problems as early indicators, with fast progress such as factoring 1536-bit numbers being the alarm threshold.",
    "link": "https://x.com/i/web/status/2126372061400404338",
    "t": 1795801822.413654
+  }
+ ],
+ "markets": [
+  {
+   "label": "An AI lab announces it has solved P vs NP in 2026",
+   "yes": 8.8,
+   "day": -6.2,
+   "week": 4.3,
+   "volume": 509908,
+   "closed": false,
+   "disputed": false,
+   "url": "https://polymarket.com/event/which-math-problems-will-ai-solve-in-2026",
+   "flag": "amber"
+  },
+  {
+   "label": "An AI lab announces it has solved the Riemann Hypothesis in 2026",
+   "yes": 73.5,
+   "day": 10.0,
+   "week": -5.5,
+   "volume": 731267,
+   "closed": false,
+   "disputed": true,
+   "url": "https://polymarket.com/event/which-math-problems-will-ai-solve-in-2026",
+   "flag": "amber"
+  },
+  {
+   "label": "A quantum computer breaks a Bitcoin key by end of 2026",
+   "yes": 3.1,
+   "day": 1.1,
+   "week": 1.1,
+   "volume": 3101,
+   "closed": false,
+   "disputed": false,
+   "url": "https://polymarket.com/event/quantum-breaks-bitcoin-by",
+   "flag": "green"
+  },
+  {
+   "label": "A quantum computer breaks a Bitcoin key by end of 2027",
+   "yes": 13.0,
+   "day": 1.0,
+   "week": 1.0,
+   "volume": 1577,
+   "closed": false,
+   "disputed": false,
+   "url": "https://polymarket.com/event/quantum-breaks-bitcoin-by",
+   "flag": "green"
+  },
+  {
+   "label": "Bitcoin activates a quantum-resistant upgrade in 2026",
+   "yes": 7.3,
+   "day": 2.1,
+   "week": 2.1,
+   "volume": 4096,
+   "closed": false,
+   "disputed": false,
+   "url": "https://polymarket.com/event/bitcoin-quantum-resistant-upgrade-implemented-in-2026",
+   "flag": "green"
+  },
+  {
+   "label": "Bitcoin replaces SHA-256 before 2027",
+   "yes": 1.9,
+   "day": 0.1,
+   "week": 0.1,
+   "volume": 199507,
+   "closed": false,
+   "disputed": false,
+   "url": "https://polymarket.com/event/will-bitcoin-replace-sha-256-before-2027",
+   "flag": "green"
   }
  ]
 }
