@@ -1,5 +1,5 @@
 {
- "updated": 1795885801,
+ "updated": 1795886101,
  "cards": {
   "RSA": {
    "level": "amber",
@@ -282,7 +282,7 @@
    "yes": 9.2,
    "day": -2.9,
    "week": 4.7,
-   "volume": 518990,
+   "volume": 519072,
    "closed": false,
    "disputed": false,
    "url": "https://polymarket.com/event/which-math-problems-will-ai-solve-in-2026",
@@ -293,7 +293,7 @@
    "yes": 76.5,
    "day": 11.0,
    "week": -2.5,
-   "volume": 734264,
+   "volume": 734298,
    "closed": false,
    "disputed": true,
    "url": "https://polymarket.com/event/which-math-problems-will-ai-solve-in-2026",
@@ -323,14 +323,14 @@
   },
   {
    "label": "Bitcoin activates a quantum-resistant upgrade in 2026",
-   "yes": 3.2,
-   "day": -5.3,
-   "week": -1.9,
+   "yes": 4.2,
+   "day": -4.3,
+   "week": -1.0,
    "volume": 4104,
    "closed": false,
    "disputed": false,
    "url": "https://polymarket.com/event/bitcoin-quantum-resistant-upgrade-implemented-in-2026",
-   "flag": "amber"
+   "flag": "green"
   },
   {
    "label": "Bitcoin replaces SHA-256 before 2027",
