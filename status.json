@@ -1,5 +1,5 @@
 {
- "updated": 1795881001,
+ "updated": 1795881301,
  "cards": {
   "RSA": {
    "level": "amber",
@@ -275,7 +275,7 @@
    "yes": 8.9,
    "day": -6.1,
    "week": 4.5,
-   "volume": 512916,
+   "volume": 518521,
    "closed": false,
    "disputed": false,
    "url": "https://polymarket.com/event/which-math-problems-will-ai-solve-in-2026",
@@ -283,10 +283,10 @@
   },
   {
    "label": "An AI lab announces it has solved the Riemann Hypothesis in 2026",
-   "yes": 72.0,
-   "day": 7.0,
-   "week": -7.0,
-   "volume": 732419,
+   "yes": 72.5,
+   "day": 7.5,
+   "week": -6.5,
+   "volume": 732863,
    "closed": false,
    "disputed": true,
    "url": "https://polymarket.com/event/which-math-problems-will-ai-solve-in-2026",
